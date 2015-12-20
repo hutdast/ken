@@ -1,0 +1,714 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		713EA9713F981993A7803802 /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0349500442E83C9353860A36 /* Pods.framework */; };
+		B71245611C253A6800528741 /* AddressCaptureViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B71245601C253A6800528741 /* AddressCaptureViewController.swift */; };
+		B7828AC71C263C080098C5D0 /* CheckBoxButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7828AC61C263C080098C5D0 /* CheckBoxButton.swift */; };
+		B7E4CC9F1C1EF3F5003EC434 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7E4CC9E1C1EF3F5003EC434 /* AppDelegate.swift */; };
+		B7E4CCA11C1EF3F5003EC434 /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7E4CCA01C1EF3F5003EC434 /* WelcomeViewController.swift */; };
+		B7E4CCA41C1EF3F5003EC434 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B7E4CCA21C1EF3F5003EC434 /* Main.storyboard */; };
+		B7E4CCA61C1EF3F5003EC434 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B7E4CCA51C1EF3F5003EC434 /* Assets.xcassets */; };
+		B7E4CCA91C1EF3F5003EC434 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B7E4CCA71C1EF3F5003EC434 /* LaunchScreen.storyboard */; };
+		B7E4CCB41C1EF3F5003EC434 /* KenelLaraqueTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7E4CCB31C1EF3F5003EC434 /* KenelLaraqueTests.swift */; };
+		B7E4CCBF1C1EF3F5003EC434 /* KenelLaraqueUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7E4CCBE1C1EF3F5003EC434 /* KenelLaraqueUITests.swift */; };
+		B7EFFBED1C2437A4002B1080 /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = B7EFFBEC1C2437A4002B1080 /* Podfile */; };
+		B7EFFBEF1C243917002B1080 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B7EFFBEE1C243917002B1080 /* MapKit.framework */; };
+		B7EFFBF11C243C04002B1080 /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7EFFBF01C243C04002B1080 /* DataManager.swift */; };
+		B7EFFBF31C243F89002B1080 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B7EFFBF21C243F89002B1080 /* Alamofire.framework */; };
+		B7EFFBF81C243F90002B1080 /* SQLCipher.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B7EFFBF41C243F90002B1080 /* SQLCipher.framework */; };
+		B7EFFBF91C243F90002B1080 /* SQLite.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B7EFFBF51C243F90002B1080 /* SQLite.framework */; };
+		B7EFFBFA1C243F90002B1080 /* SQLiteCipher.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B7EFFBF61C243F90002B1080 /* SQLiteCipher.framework */; };
+		B7EFFBFB1C243F90002B1080 /* SwiftyJSON.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B7EFFBF71C243F90002B1080 /* SwiftyJSON.framework */; };
+		B7EFFBFD1C243FA3002B1080 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B7EFFBFC1C243FA3002B1080 /* CoreLocation.framework */; };
+		B7EFFBFF1C2447E9002B1080 /* ChoicesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7EFFBFE1C2447E9002B1080 /* ChoicesTableViewController.swift */; };
+		B7EFFC0E1C245192002B1080 /* FMDatabase.m in Sources */ = {isa = PBXBuildFile; fileRef = B7EFFC051C245192002B1080 /* FMDatabase.m */; };
+		B7EFFC0F1C245192002B1080 /* FMResultSet.m in Sources */ = {isa = PBXBuildFile; fileRef = B7EFFC071C245192002B1080 /* FMResultSet.m */; };
+		B7EFFC101C245192002B1080 /* FMDatabaseQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = B7EFFC091C245192002B1080 /* FMDatabaseQueue.m */; };
+		B7EFFC111C245192002B1080 /* FMDatabaseAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = B7EFFC0B1C245192002B1080 /* FMDatabaseAdditions.m */; };
+		B7EFFC121C245192002B1080 /* FMDatabasePool.m in Sources */ = {isa = PBXBuildFile; fileRef = B7EFFC0D1C245192002B1080 /* FMDatabasePool.m */; };
+		C15A97F0B0AAC341503E0083 /* Pods_KenelLaraque.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CDA8DCABDC73FEBCCFC575F8 /* Pods_KenelLaraque.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		B7E4CCB01C1EF3F5003EC434 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B7E4CC931C1EF3F5003EC434 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B7E4CC9A1C1EF3F5003EC434;
+			remoteInfo = KenelLaraque;
+		};
+		B7E4CCBB1C1EF3F5003EC434 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B7E4CC931C1EF3F5003EC434 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B7E4CC9A1C1EF3F5003EC434;
+			remoteInfo = KenelLaraque;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		0349500442E83C9353860A36 /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9F5EE63DE2EA53444F53FCD0 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+		B71245601C253A6800528741 /* AddressCaptureViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddressCaptureViewController.swift; sourceTree = "<group>"; };
+		B7828AC61C263C080098C5D0 /* CheckBoxButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CheckBoxButton.swift; sourceTree = "<group>"; };
+		B7E4CC9B1C1EF3F5003EC434 /* KenelLaraque.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KenelLaraque.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		B7E4CC9E1C1EF3F5003EC434 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		B7E4CCA01C1EF3F5003EC434 /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
+		B7E4CCA31C1EF3F5003EC434 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		B7E4CCA51C1EF3F5003EC434 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		B7E4CCA81C1EF3F5003EC434 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		B7E4CCAA1C1EF3F5003EC434 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B7E4CCAF1C1EF3F5003EC434 /* KenelLaraqueTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = KenelLaraqueTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		B7E4CCB31C1EF3F5003EC434 /* KenelLaraqueTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KenelLaraqueTests.swift; sourceTree = "<group>"; };
+		B7E4CCB51C1EF3F5003EC434 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B7E4CCBA1C1EF3F5003EC434 /* KenelLaraqueUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = KenelLaraqueUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		B7E4CCBE1C1EF3F5003EC434 /* KenelLaraqueUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KenelLaraqueUITests.swift; sourceTree = "<group>"; };
+		B7E4CCC01C1EF3F5003EC434 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B7EFFBEC1C2437A4002B1080 /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		B7EFFBEE1C243917002B1080 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		B7EFFBF01C243C04002B1080 /* DataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DataManager.swift; path = ../../trymap/trymap/DataManager.swift; sourceTree = "<group>"; };
+		B7EFFBF21C243F89002B1080 /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = "Pods/../build/Debug-iphoneos/Alamofire.framework"; sourceTree = "<group>"; };
+		B7EFFBF41C243F90002B1080 /* SQLCipher.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SQLCipher.framework; path = "Pods/../build/Debug-iphoneos/SQLCipher.framework"; sourceTree = "<group>"; };
+		B7EFFBF51C243F90002B1080 /* SQLite.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SQLite.framework; path = "Pods/../build/Debug-iphoneos/SQLite.framework"; sourceTree = "<group>"; };
+		B7EFFBF61C243F90002B1080 /* SQLiteCipher.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SQLiteCipher.framework; path = "Pods/../build/Debug-iphoneos/SQLiteCipher.framework"; sourceTree = "<group>"; };
+		B7EFFBF71C243F90002B1080 /* SwiftyJSON.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftyJSON.framework; path = "Pods/../build/Debug-iphoneos/SwiftyJSON.framework"; sourceTree = "<group>"; };
+		B7EFFBFC1C243FA3002B1080 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		B7EFFBFE1C2447E9002B1080 /* ChoicesTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChoicesTableViewController.swift; sourceTree = "<group>"; };
+		B7EFFC021C245191002B1080 /* KenelLaraque-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "KenelLaraque-Bridging-Header.h"; sourceTree = "<group>"; };
+		B7EFFC031C245192002B1080 /* FMDB.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FMDB.h; path = KenelLaraque/FMDB.h; sourceTree = "<group>"; };
+		B7EFFC041C245192002B1080 /* FMDatabase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FMDatabase.h; path = KenelLaraque/FMDatabase.h; sourceTree = "<group>"; };
+		B7EFFC051C245192002B1080 /* FMDatabase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FMDatabase.m; path = KenelLaraque/FMDatabase.m; sourceTree = "<group>"; };
+		B7EFFC061C245192002B1080 /* FMResultSet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FMResultSet.h; path = KenelLaraque/FMResultSet.h; sourceTree = "<group>"; };
+		B7EFFC071C245192002B1080 /* FMResultSet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FMResultSet.m; path = KenelLaraque/FMResultSet.m; sourceTree = "<group>"; };
+		B7EFFC081C245192002B1080 /* FMDatabaseQueue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FMDatabaseQueue.h; path = KenelLaraque/FMDatabaseQueue.h; sourceTree = "<group>"; };
+		B7EFFC091C245192002B1080 /* FMDatabaseQueue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FMDatabaseQueue.m; path = KenelLaraque/FMDatabaseQueue.m; sourceTree = "<group>"; };
+		B7EFFC0A1C245192002B1080 /* FMDatabaseAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FMDatabaseAdditions.h; path = KenelLaraque/FMDatabaseAdditions.h; sourceTree = "<group>"; };
+		B7EFFC0B1C245192002B1080 /* FMDatabaseAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FMDatabaseAdditions.m; path = KenelLaraque/FMDatabaseAdditions.m; sourceTree = "<group>"; };
+		B7EFFC0C1C245192002B1080 /* FMDatabasePool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FMDatabasePool.h; path = KenelLaraque/FMDatabasePool.h; sourceTree = "<group>"; };
+		B7EFFC0D1C245192002B1080 /* FMDatabasePool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FMDatabasePool.m; path = KenelLaraque/FMDatabasePool.m; sourceTree = "<group>"; };
+		CDA8DCABDC73FEBCCFC575F8 /* Pods_KenelLaraque.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_KenelLaraque.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D8027FD3C7FC9227E2F86213 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		B7E4CC981C1EF3F5003EC434 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B7EFFBEF1C243917002B1080 /* MapKit.framework in Frameworks */,
+				B7EFFBFD1C243FA3002B1080 /* CoreLocation.framework in Frameworks */,
+				B7EFFBF81C243F90002B1080 /* SQLCipher.framework in Frameworks */,
+				B7EFFBF91C243F90002B1080 /* SQLite.framework in Frameworks */,
+				B7EFFBFA1C243F90002B1080 /* SQLiteCipher.framework in Frameworks */,
+				B7EFFBFB1C243F90002B1080 /* SwiftyJSON.framework in Frameworks */,
+				B7EFFBF31C243F89002B1080 /* Alamofire.framework in Frameworks */,
+				713EA9713F981993A7803802 /* Pods.framework in Frameworks */,
+				C15A97F0B0AAC341503E0083 /* Pods_KenelLaraque.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B7E4CCAC1C1EF3F5003EC434 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B7E4CCB71C1EF3F5003EC434 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		284118F54C274EC9CEE28C77 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B7EFFBFC1C243FA3002B1080 /* CoreLocation.framework */,
+				B7EFFBF41C243F90002B1080 /* SQLCipher.framework */,
+				B7EFFBF51C243F90002B1080 /* SQLite.framework */,
+				B7EFFBF61C243F90002B1080 /* SQLiteCipher.framework */,
+				B7EFFBF71C243F90002B1080 /* SwiftyJSON.framework */,
+				B7EFFBF21C243F89002B1080 /* Alamofire.framework */,
+				B7EFFBEE1C243917002B1080 /* MapKit.framework */,
+				0349500442E83C9353860A36 /* Pods.framework */,
+				CDA8DCABDC73FEBCCFC575F8 /* Pods_KenelLaraque.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		65153DF17B1B9BC8ED7628A4 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				9F5EE63DE2EA53444F53FCD0 /* Pods.debug.xcconfig */,
+				D8027FD3C7FC9227E2F86213 /* Pods.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		B7E4CC921C1EF3F5003EC434 = {
+			isa = PBXGroup;
+			children = (
+				B7EFFC131C246DD4002B1080 /* FMDB */,
+				B7EFFBEC1C2437A4002B1080 /* Podfile */,
+				B7E4CC9D1C1EF3F5003EC434 /* KenelLaraque */,
+				B7E4CCB21C1EF3F5003EC434 /* KenelLaraqueTests */,
+				B7E4CCBD1C1EF3F5003EC434 /* KenelLaraqueUITests */,
+				B7E4CC9C1C1EF3F5003EC434 /* Products */,
+				65153DF17B1B9BC8ED7628A4 /* Pods */,
+				284118F54C274EC9CEE28C77 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		B7E4CC9C1C1EF3F5003EC434 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				B7E4CC9B1C1EF3F5003EC434 /* KenelLaraque.app */,
+				B7E4CCAF1C1EF3F5003EC434 /* KenelLaraqueTests.xctest */,
+				B7E4CCBA1C1EF3F5003EC434 /* KenelLaraqueUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		B7E4CC9D1C1EF3F5003EC434 /* KenelLaraque */ = {
+			isa = PBXGroup;
+			children = (
+				B7EFFBF01C243C04002B1080 /* DataManager.swift */,
+				B7E4CC9E1C1EF3F5003EC434 /* AppDelegate.swift */,
+				B7E4CCA01C1EF3F5003EC434 /* WelcomeViewController.swift */,
+				B7E4CCA21C1EF3F5003EC434 /* Main.storyboard */,
+				B7E4CCA51C1EF3F5003EC434 /* Assets.xcassets */,
+				B7E4CCA71C1EF3F5003EC434 /* LaunchScreen.storyboard */,
+				B7E4CCAA1C1EF3F5003EC434 /* Info.plist */,
+				B7EFFBFE1C2447E9002B1080 /* ChoicesTableViewController.swift */,
+				B7EFFC021C245191002B1080 /* KenelLaraque-Bridging-Header.h */,
+				B71245601C253A6800528741 /* AddressCaptureViewController.swift */,
+				B7828AC61C263C080098C5D0 /* CheckBoxButton.swift */,
+			);
+			path = KenelLaraque;
+			sourceTree = "<group>";
+		};
+		B7E4CCB21C1EF3F5003EC434 /* KenelLaraqueTests */ = {
+			isa = PBXGroup;
+			children = (
+				B7E4CCB31C1EF3F5003EC434 /* KenelLaraqueTests.swift */,
+				B7E4CCB51C1EF3F5003EC434 /* Info.plist */,
+			);
+			path = KenelLaraqueTests;
+			sourceTree = "<group>";
+		};
+		B7E4CCBD1C1EF3F5003EC434 /* KenelLaraqueUITests */ = {
+			isa = PBXGroup;
+			children = (
+				B7E4CCBE1C1EF3F5003EC434 /* KenelLaraqueUITests.swift */,
+				B7E4CCC01C1EF3F5003EC434 /* Info.plist */,
+			);
+			path = KenelLaraqueUITests;
+			sourceTree = "<group>";
+		};
+		B7EFFC131C246DD4002B1080 /* FMDB */ = {
+			isa = PBXGroup;
+			children = (
+				B7EFFC031C245192002B1080 /* FMDB.h */,
+				B7EFFC041C245192002B1080 /* FMDatabase.h */,
+				B7EFFC051C245192002B1080 /* FMDatabase.m */,
+				B7EFFC061C245192002B1080 /* FMResultSet.h */,
+				B7EFFC071C245192002B1080 /* FMResultSet.m */,
+				B7EFFC081C245192002B1080 /* FMDatabaseQueue.h */,
+				B7EFFC091C245192002B1080 /* FMDatabaseQueue.m */,
+				B7EFFC0A1C245192002B1080 /* FMDatabaseAdditions.h */,
+				B7EFFC0B1C245192002B1080 /* FMDatabaseAdditions.m */,
+				B7EFFC0C1C245192002B1080 /* FMDatabasePool.h */,
+				B7EFFC0D1C245192002B1080 /* FMDatabasePool.m */,
+			);
+			name = FMDB;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		B7E4CC9A1C1EF3F5003EC434 /* KenelLaraque */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B7E4CCC31C1EF3F5003EC434 /* Build configuration list for PBXNativeTarget "KenelLaraque" */;
+			buildPhases = (
+				B3FB34B30AD691B5E6AEC3A1 /* Check Pods Manifest.lock */,
+				B7E4CC971C1EF3F5003EC434 /* Sources */,
+				B7E4CC981C1EF3F5003EC434 /* Frameworks */,
+				B7E4CC991C1EF3F5003EC434 /* Resources */,
+				FFCDF6794629029642B8A55D /* Embed Pods Frameworks */,
+				A893A419D02AC62D11DA00FF /* Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = KenelLaraque;
+			productName = KenelLaraque;
+			productReference = B7E4CC9B1C1EF3F5003EC434 /* KenelLaraque.app */;
+			productType = "com.apple.product-type.application";
+		};
+		B7E4CCAE1C1EF3F5003EC434 /* KenelLaraqueTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B7E4CCC61C1EF3F5003EC434 /* Build configuration list for PBXNativeTarget "KenelLaraqueTests" */;
+			buildPhases = (
+				B7E4CCAB1C1EF3F5003EC434 /* Sources */,
+				B7E4CCAC1C1EF3F5003EC434 /* Frameworks */,
+				B7E4CCAD1C1EF3F5003EC434 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				B7E4CCB11C1EF3F5003EC434 /* PBXTargetDependency */,
+			);
+			name = KenelLaraqueTests;
+			productName = KenelLaraqueTests;
+			productReference = B7E4CCAF1C1EF3F5003EC434 /* KenelLaraqueTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		B7E4CCB91C1EF3F5003EC434 /* KenelLaraqueUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B7E4CCC91C1EF3F5003EC434 /* Build configuration list for PBXNativeTarget "KenelLaraqueUITests" */;
+			buildPhases = (
+				B7E4CCB61C1EF3F5003EC434 /* Sources */,
+				B7E4CCB71C1EF3F5003EC434 /* Frameworks */,
+				B7E4CCB81C1EF3F5003EC434 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				B7E4CCBC1C1EF3F5003EC434 /* PBXTargetDependency */,
+			);
+			name = KenelLaraqueUITests;
+			productName = KenelLaraqueUITests;
+			productReference = B7E4CCBA1C1EF3F5003EC434 /* KenelLaraqueUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		B7E4CC931C1EF3F5003EC434 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0720;
+				LastUpgradeCheck = 0720;
+				ORGANIZATIONNAME = pnmidi;
+				TargetAttributes = {
+					B7E4CC9A1C1EF3F5003EC434 = {
+						CreatedOnToolsVersion = 7.2;
+						DevelopmentTeam = DGX7ZNBQJU;
+						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
+							com.apple.Maps.iOS = {
+								enabled = 1;
+							};
+							com.apple.Push = {
+								enabled = 0;
+							};
+						};
+					};
+					B7E4CCAE1C1EF3F5003EC434 = {
+						CreatedOnToolsVersion = 7.2;
+						TestTargetID = B7E4CC9A1C1EF3F5003EC434;
+					};
+					B7E4CCB91C1EF3F5003EC434 = {
+						CreatedOnToolsVersion = 7.2;
+						TestTargetID = B7E4CC9A1C1EF3F5003EC434;
+					};
+				};
+			};
+			buildConfigurationList = B7E4CC961C1EF3F5003EC434 /* Build configuration list for PBXProject "KenelLaraque" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = B7E4CC921C1EF3F5003EC434;
+			productRefGroup = B7E4CC9C1C1EF3F5003EC434 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				B7E4CC9A1C1EF3F5003EC434 /* KenelLaraque */,
+				B7E4CCAE1C1EF3F5003EC434 /* KenelLaraqueTests */,
+				B7E4CCB91C1EF3F5003EC434 /* KenelLaraqueUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		B7E4CC991C1EF3F5003EC434 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B7E4CCA91C1EF3F5003EC434 /* LaunchScreen.storyboard in Resources */,
+				B7E4CCA61C1EF3F5003EC434 /* Assets.xcassets in Resources */,
+				B7EFFBED1C2437A4002B1080 /* Podfile in Resources */,
+				B7E4CCA41C1EF3F5003EC434 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B7E4CCAD1C1EF3F5003EC434 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B7E4CCB81C1EF3F5003EC434 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		A893A419D02AC62D11DA00FF /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-KenelLaraque/Pods-KenelLaraque-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B3FB34B30AD691B5E6AEC3A1 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		FFCDF6794629029642B8A55D /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-KenelLaraque/Pods-KenelLaraque-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		B7E4CC971C1EF3F5003EC434 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B7EFFC0F1C245192002B1080 /* FMResultSet.m in Sources */,
+				B7EFFBFF1C2447E9002B1080 /* ChoicesTableViewController.swift in Sources */,
+				B7E4CCA11C1EF3F5003EC434 /* WelcomeViewController.swift in Sources */,
+				B7EFFC101C245192002B1080 /* FMDatabaseQueue.m in Sources */,
+				B7EFFC121C245192002B1080 /* FMDatabasePool.m in Sources */,
+				B7EFFBF11C243C04002B1080 /* DataManager.swift in Sources */,
+				B71245611C253A6800528741 /* AddressCaptureViewController.swift in Sources */,
+				B7828AC71C263C080098C5D0 /* CheckBoxButton.swift in Sources */,
+				B7EFFC0E1C245192002B1080 /* FMDatabase.m in Sources */,
+				B7E4CC9F1C1EF3F5003EC434 /* AppDelegate.swift in Sources */,
+				B7EFFC111C245192002B1080 /* FMDatabaseAdditions.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B7E4CCAB1C1EF3F5003EC434 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B7E4CCB41C1EF3F5003EC434 /* KenelLaraqueTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B7E4CCB61C1EF3F5003EC434 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B7E4CCBF1C1EF3F5003EC434 /* KenelLaraqueUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		B7E4CCB11C1EF3F5003EC434 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B7E4CC9A1C1EF3F5003EC434 /* KenelLaraque */;
+			targetProxy = B7E4CCB01C1EF3F5003EC434 /* PBXContainerItemProxy */;
+		};
+		B7E4CCBC1C1EF3F5003EC434 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B7E4CC9A1C1EF3F5003EC434 /* KenelLaraque */;
+			targetProxy = B7E4CCBB1C1EF3F5003EC434 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		B7E4CCA21C1EF3F5003EC434 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B7E4CCA31C1EF3F5003EC434 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		B7E4CCA71C1EF3F5003EC434 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B7E4CCA81C1EF3F5003EC434 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		B7E4CCC11C1EF3F5003EC434 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		B7E4CCC21C1EF3F5003EC434 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		B7E4CCC41C1EF3F5003EC434 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9F5EE63DE2EA53444F53FCD0 /* Pods.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = "AppIcon-1";
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/build/Debug-iphoneos",
+				);
+				INFOPLIST_FILE = KenelLaraque/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.pnmidi.KenelLaraque;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "KenelLaraque/KenelLaraque-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		B7E4CCC51C1EF3F5003EC434 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = D8027FD3C7FC9227E2F86213 /* Pods.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = "AppIcon-1";
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/build/Debug-iphoneos",
+				);
+				INFOPLIST_FILE = KenelLaraque/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.pnmidi.KenelLaraque;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "KenelLaraque/KenelLaraque-Bridging-Header.h";
+			};
+			name = Release;
+		};
+		B7E4CCC71C1EF3F5003EC434 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = KenelLaraqueTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.pnmidi.KenelLaraqueTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/KenelLaraque.app/KenelLaraque";
+			};
+			name = Debug;
+		};
+		B7E4CCC81C1EF3F5003EC434 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = KenelLaraqueTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.pnmidi.KenelLaraqueTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/KenelLaraque.app/KenelLaraque";
+			};
+			name = Release;
+		};
+		B7E4CCCA1C1EF3F5003EC434 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = KenelLaraqueUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.pnmidi.KenelLaraqueUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = KenelLaraque;
+				USES_XCTRUNNER = YES;
+			};
+			name = Debug;
+		};
+		B7E4CCCB1C1EF3F5003EC434 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = KenelLaraqueUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.pnmidi.KenelLaraqueUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = KenelLaraque;
+				USES_XCTRUNNER = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		B7E4CC961C1EF3F5003EC434 /* Build configuration list for PBXProject "KenelLaraque" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B7E4CCC11C1EF3F5003EC434 /* Debug */,
+				B7E4CCC21C1EF3F5003EC434 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B7E4CCC31C1EF3F5003EC434 /* Build configuration list for PBXNativeTarget "KenelLaraque" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B7E4CCC41C1EF3F5003EC434 /* Debug */,
+				B7E4CCC51C1EF3F5003EC434 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B7E4CCC61C1EF3F5003EC434 /* Build configuration list for PBXNativeTarget "KenelLaraqueTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B7E4CCC71C1EF3F5003EC434 /* Debug */,
+				B7E4CCC81C1EF3F5003EC434 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B7E4CCC91C1EF3F5003EC434 /* Build configuration list for PBXNativeTarget "KenelLaraqueUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B7E4CCCA1C1EF3F5003EC434 /* Debug */,
+				B7E4CCCB1C1EF3F5003EC434 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = B7E4CC931C1EF3F5003EC434 /* Project object */;
+}

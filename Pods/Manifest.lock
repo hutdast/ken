@@ -1,0 +1,45 @@
+PODS:
+  - Alamofire (3.1.4)
+  - SQLCipher (3.3.1):
+    - SQLCipher/standard (= 3.3.1)
+  - SQLCipher/common (3.3.1)
+  - SQLCipher/standard (3.3.1):
+    - SQLCipher/common
+  - SQLite.swift (1.0.0)
+  - SQLiteCipher.swift (1.0.0):
+    - SQLCipher
+  - SwiftyJSON (2.3.2)
+
+DEPENDENCIES:
+  - Alamofire (~> 3.0)
+  - SQLite.swift (from `https://github.com/stephencelis/SQLite.swift.git`)
+  - SQLiteCipher.swift (from `https://github.com/stephencelis/SQLite.swift.git`)
+  - SwiftyJSON (from `https://github.com/SwiftyJSON/SwiftyJSON.git`)
+
+EXTERNAL SOURCES:
+  SQLite.swift:
+    :git: https://github.com/stephencelis/SQLite.swift.git
+  SQLiteCipher.swift:
+    :git: https://github.com/stephencelis/SQLite.swift.git
+  SwiftyJSON:
+    :git: https://github.com/SwiftyJSON/SwiftyJSON.git
+
+CHECKOUT OPTIONS:
+  SQLite.swift:
+    :commit: da2d43422a72ae0e91356fccfde1959d43b97385
+    :git: https://github.com/stephencelis/SQLite.swift.git
+  SQLiteCipher.swift:
+    :commit: da2d43422a72ae0e91356fccfde1959d43b97385
+    :git: https://github.com/stephencelis/SQLite.swift.git
+  SwiftyJSON:
+    :commit: 8e618c8baf6323a5079c6549bb38d48357b31630
+    :git: https://github.com/SwiftyJSON/SwiftyJSON.git
+
+SPEC CHECKSUMS:
+  Alamofire: fbc829692f351fa1d8a31dd75fd7f7f56fea31fb
+  SQLCipher: d490d2effe735895d2204d25a154b1e722278421
+  SQLite.swift: 3bb75f5a650f08673276bc6d3fb1de1b542b8f4d
+  SQLiteCipher.swift: 6405d3937f6afc94614949336fd1fdefa37428b5
+  SwiftyJSON: 04ccea08915aa0109039157c7974cf0298da292a
+
+COCOAPODS: 0.39.0
