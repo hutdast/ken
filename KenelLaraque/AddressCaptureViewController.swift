@@ -74,13 +74,14 @@ class AddressCaptureViewController: UIViewController, UIPickerViewDelegate {
         {
             result.text = "OU BLIYE REMPLI YOUN"
            isItSafe = false
+            
         }else
         {
             let modified = tempDB.modifyAddressForAPiUse(location, city: citY, state: stateAdr)
             let session =  tempDB.getDataFromService( modified).apisSession
             let urlRequest = tempDB.getDataFromService( modified).urlrequest
-                        
-            if !tempDB.getGridCoordinates(session, urlRequest: urlRequest).notSuccessful
+               print("did we capture teh state..:\(stateAdr)")
+            if !tempDB.getGridCoordinates(session, urlRequest: urlRequest).isSuccessful
             {
                 result.text = "Cheke adrès la"
                 isItSafe = false
@@ -91,8 +92,8 @@ class AddressCaptureViewController: UIViewController, UIPickerViewDelegate {
                 isItSafe = true
             }
 
-            }
-            
+        }
+        
             
         return(name, lat, lng, isItSafe)
     }
