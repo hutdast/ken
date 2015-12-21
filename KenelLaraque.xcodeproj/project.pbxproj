@@ -19,7 +19,6 @@
 		B7E4CCBF1C1EF3F5003EC434 /* KenelLaraqueUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7E4CCBE1C1EF3F5003EC434 /* KenelLaraqueUITests.swift */; };
 		B7EFFBED1C2437A4002B1080 /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = B7EFFBEC1C2437A4002B1080 /* Podfile */; };
 		B7EFFBEF1C243917002B1080 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B7EFFBEE1C243917002B1080 /* MapKit.framework */; };
-		B7EFFBF11C243C04002B1080 /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7EFFBF01C243C04002B1080 /* DataManager.swift */; };
 		B7EFFBF31C243F89002B1080 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B7EFFBF21C243F89002B1080 /* Alamofire.framework */; };
 		B7EFFBF81C243F90002B1080 /* SQLCipher.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B7EFFBF41C243F90002B1080 /* SQLCipher.framework */; };
 		B7EFFBF91C243F90002B1080 /* SQLite.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B7EFFBF51C243F90002B1080 /* SQLite.framework */; };
@@ -32,6 +31,7 @@
 		B7EFFC101C245192002B1080 /* FMDatabaseQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = B7EFFC091C245192002B1080 /* FMDatabaseQueue.m */; };
 		B7EFFC111C245192002B1080 /* FMDatabaseAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = B7EFFC0B1C245192002B1080 /* FMDatabaseAdditions.m */; };
 		B7EFFC121C245192002B1080 /* FMDatabasePool.m in Sources */ = {isa = PBXBuildFile; fileRef = B7EFFC0D1C245192002B1080 /* FMDatabasePool.m */; };
+		B7FC97BC1C2787DD00D20BFD /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7FC97BB1C2787DD00D20BFD /* DataManager.swift */; };
 		C15A97F0B0AAC341503E0083 /* Pods_KenelLaraque.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CDA8DCABDC73FEBCCFC575F8 /* Pods_KenelLaraque.framework */; };
 /* End PBXBuildFile section */
 
@@ -72,7 +72,6 @@
 		B7E4CCC01C1EF3F5003EC434 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B7EFFBEC1C2437A4002B1080 /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		B7EFFBEE1C243917002B1080 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
-		B7EFFBF01C243C04002B1080 /* DataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DataManager.swift; path = ../../trymap/trymap/DataManager.swift; sourceTree = "<group>"; };
 		B7EFFBF21C243F89002B1080 /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = "Pods/../build/Debug-iphoneos/Alamofire.framework"; sourceTree = "<group>"; };
 		B7EFFBF41C243F90002B1080 /* SQLCipher.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SQLCipher.framework; path = "Pods/../build/Debug-iphoneos/SQLCipher.framework"; sourceTree = "<group>"; };
 		B7EFFBF51C243F90002B1080 /* SQLite.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SQLite.framework; path = "Pods/../build/Debug-iphoneos/SQLite.framework"; sourceTree = "<group>"; };
@@ -92,6 +91,7 @@
 		B7EFFC0B1C245192002B1080 /* FMDatabaseAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FMDatabaseAdditions.m; path = KenelLaraque/FMDatabaseAdditions.m; sourceTree = "<group>"; };
 		B7EFFC0C1C245192002B1080 /* FMDatabasePool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FMDatabasePool.h; path = KenelLaraque/FMDatabasePool.h; sourceTree = "<group>"; };
 		B7EFFC0D1C245192002B1080 /* FMDatabasePool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FMDatabasePool.m; path = KenelLaraque/FMDatabasePool.m; sourceTree = "<group>"; };
+		B7FC97BB1C2787DD00D20BFD /* DataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
 		CDA8DCABDC73FEBCCFC575F8 /* Pods_KenelLaraque.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_KenelLaraque.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D8027FD3C7FC9227E2F86213 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -182,8 +182,8 @@
 		B7E4CC9D1C1EF3F5003EC434 /* KenelLaraque */ = {
 			isa = PBXGroup;
 			children = (
-				B7EFFBF01C243C04002B1080 /* DataManager.swift */,
 				B7E4CC9E1C1EF3F5003EC434 /* AppDelegate.swift */,
+				B7FC97BB1C2787DD00D20BFD /* DataManager.swift */,
 				B7E4CCA01C1EF3F5003EC434 /* WelcomeViewController.swift */,
 				B7E4CCA21C1EF3F5003EC434 /* Main.storyboard */,
 				B7E4CCA51C1EF3F5003EC434 /* Assets.xcassets */,
@@ -433,10 +433,10 @@
 				B7E4CCA11C1EF3F5003EC434 /* WelcomeViewController.swift in Sources */,
 				B7EFFC101C245192002B1080 /* FMDatabaseQueue.m in Sources */,
 				B7EFFC121C245192002B1080 /* FMDatabasePool.m in Sources */,
-				B7EFFBF11C243C04002B1080 /* DataManager.swift in Sources */,
 				B71245611C253A6800528741 /* AddressCaptureViewController.swift in Sources */,
 				B7828AC71C263C080098C5D0 /* CheckBoxButton.swift in Sources */,
 				B7EFFC0E1C245192002B1080 /* FMDatabase.m in Sources */,
+				B7FC97BC1C2787DD00D20BFD /* DataManager.swift in Sources */,
 				B7E4CC9F1C1EF3F5003EC434 /* AppDelegate.swift in Sources */,
 				B7EFFC111C245192002B1080 /* FMDatabaseAdditions.m in Sources */,
 			);

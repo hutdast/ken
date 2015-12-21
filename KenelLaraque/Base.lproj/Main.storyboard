@@ -406,6 +406,9 @@
                                 <variation key="heightClass=regular-widthClass=regular" fixedFrame="YES">
                                     <rect key="frame" x="141" y="396" width="400" height="30"/>
                                 </variation>
+                                <connections>
+                                    <action selector="checkUserInputs:" destination="fUG-E1-oDI" eventType="editingDidEnd" id="Xz1-oZ-rRr"/>
+                                </connections>
                             </textField>
                             <pickerView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="qzi-QJ-9BO">
                                 <rect key="frame" x="332" y="226" width="133" height="33"/>
@@ -587,6 +590,7 @@
                         <outlet property="nameOfAddress" destination="CrG-AM-fc1" id="5dc-QW-wbY"/>
                         <outlet property="rendezVous" destination="45O-Tk-B36" id="7Vk-cd-1zz"/>
                         <outlet property="result" destination="v1b-HL-ITV" id="bWX-HK-Duo"/>
+                        <outlet property="resultButton" destination="P9K-HN-BBA" id="ull-B0-8TT"/>
                         <outlet property="statePicker" destination="qzi-QJ-9BO" id="G4b-I4-zgS"/>
                     </connections>
                 </viewController>
