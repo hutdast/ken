@@ -296,33 +296,6 @@
                                     <rect key="frame" x="20" y="221" width="107" height="29"/>
                                 </variation>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" alpha="0.40000000000000002" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Rezilta" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="v1b-HL-ITV">
-                                <rect key="frame" x="141" y="413" width="400" height="113"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="0.40000000600000002" green="1" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                                <variation key="heightClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="129" y="289" width="400" height="76"/>
-                                </variation>
-                                <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="138" y="409" width="235" height="104"/>
-                                </variation>
-                                <variation key="widthClass=regular" fixedFrame="YES">
-                                    <rect key="frame" x="141" y="422" width="400" height="104"/>
-                                </variation>
-                                <variation key="heightClass=compact-widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="184" y="278" width="196" height="67"/>
-                                </variation>
-                                <variation key="heightClass=compact-widthClass=regular" fixedFrame="YES">
-                                    <rect key="frame" x="575" y="119" width="187" height="208"/>
-                                </variation>
-                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="141" y="438" width="225" height="97"/>
-                                </variation>
-                                <variation key="heightClass=regular-widthClass=regular" fixedFrame="YES">
-                                    <rect key="frame" x="141" y="520" width="400" height="104"/>
-                                </variation>
-                            </label>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hOI-de-mcX">
                                 <rect key="frame" x="141" y="223" width="112" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -331,7 +304,7 @@
                                     <rect key="frame" x="129" y="133" width="111" height="30"/>
                                 </variation>
                                 <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="138" y="220" width="67" height="30"/>
+                                    <rect key="frame" x="138" y="220" width="235" height="30"/>
                                 </variation>
                                 <variation key="widthClass=regular" fixedFrame="YES">
                                     <rect key="frame" x="141" y="221" width="400" height="30"/>
@@ -343,7 +316,7 @@
                                     <rect key="frame" x="147" y="199" width="112" height="30"/>
                                 </variation>
                                 <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="141" y="253" width="81" height="30"/>
+                                    <rect key="frame" x="141" y="253" width="225" height="30"/>
                                 </variation>
                             </textField>
                             <button opaque="NO" alpha="0.40000000000000002" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="P9K-HN-BBA">
@@ -357,7 +330,7 @@
                                     <rect key="frame" x="406" y="360" width="135" height="30"/>
                                 </variation>
                                 <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="138" y="343" width="235" height="30"/>
+                                    <rect key="frame" x="138" y="410" width="235" height="30"/>
                                 </variation>
                                 <variation key="widthClass=regular" fixedFrame="YES">
                                     <rect key="frame" x="400" y="384" width="135" height="30"/>
@@ -369,7 +342,7 @@
                                     <rect key="frame" x="373" y="319" width="181" height="30"/>
                                 </variation>
                                 <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="203" y="384" width="101" height="31"/>
+                                    <rect key="frame" x="203" y="442" width="101" height="31"/>
                                 </variation>
                                 <variation key="heightClass=regular-widthClass=regular" fixedFrame="YES">
                                     <rect key="frame" x="406" y="437" width="135" height="30"/>
@@ -389,7 +362,7 @@
                                     <rect key="frame" x="141" y="313" width="400" height="30"/>
                                 </variation>
                                 <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="138" y="296" width="235" height="30"/>
+                                    <rect key="frame" x="138" y="363" width="235" height="30"/>
                                 </variation>
                                 <variation key="widthClass=regular" fixedFrame="YES">
                                     <rect key="frame" x="141" y="334" width="400" height="30"/>
@@ -401,7 +374,7 @@
                                     <rect key="frame" x="147" y="273" width="407" height="30"/>
                                 </variation>
                                 <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="141" y="346" width="225" height="30"/>
+                                    <rect key="frame" x="141" y="404" width="225" height="30"/>
                                 </variation>
                                 <variation key="heightClass=regular-widthClass=regular" fixedFrame="YES">
                                     <rect key="frame" x="141" y="396" width="400" height="30"/>
@@ -410,59 +383,6 @@
                                     <action selector="checkUserInputs:" destination="fUG-E1-oDI" eventType="editingDidEnd" id="Xz1-oZ-rRr"/>
                                 </connections>
                             </textField>
-                            <pickerView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="qzi-QJ-9BO">
-                                <rect key="frame" x="332" y="226" width="133" height="33"/>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                <color key="tintColor" red="0.40000000600000002" green="1" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
-                                <variation key="heightClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="331" y="133" width="122" height="29"/>
-                                </variation>
-                                <variation key="heightClass=regular" fixedFrame="YES">
-                                    <rect key="frame" x="324" y="226" width="138" height="40"/>
-                                </variation>
-                                <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="257" y="225" width="116" height="28"/>
-                                </variation>
-                                <variation key="widthClass=regular" fixedFrame="YES">
-                                    <rect key="frame" x="141" y="259" width="131" height="28"/>
-                                </variation>
-                                <variation key="heightClass=compact-widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="265" y="166" width="115" height="29"/>
-                                </variation>
-                                <variation key="heightClass=compact-widthClass=regular" fixedFrame="YES">
-                                    <rect key="frame" x="305" y="199" width="191" height="29"/>
-                                </variation>
-                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="256" y="244" width="124" height="43"/>
-                                </variation>
-                            </pickerView>
-                            <label opaque="NO" userInteractionEnabled="NO" alpha="0.40000000596046448" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Eta:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GT2-Dw-wR7">
-                                <rect key="frame" x="275" y="226" width="41" height="31"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="0.40000000600000002" green="1" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                                <variation key="heightClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="248" y="126" width="104" height="31"/>
-                                </variation>
-                                <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="213" y="223" width="36" height="30"/>
-                                </variation>
-                                <variation key="widthClass=regular" fixedFrame="YES">
-                                    <rect key="frame" x="20" y="251" width="104" height="31"/>
-                                </variation>
-                                <variation key="heightClass=compact-widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="229" y="165" width="40" height="30"/>
-                                </variation>
-                                <variation key="heightClass=compact-widthClass=regular" fixedFrame="YES">
-                                    <rect key="frame" x="275" y="199" width="39" height="29"/>
-                                </variation>
-                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="230" y="253" width="37" height="30"/>
-                                </variation>
-                                <variation key="heightClass=regular-widthClass=regular" fixedFrame="YES">
-                                    <rect key="frame" x="20" y="259" width="107" height="29"/>
-                                </variation>
-                            </label>
                             <label opaque="NO" userInteractionEnabled="NO" alpha="0.40000000000000002" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Kòmantè:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RQN-GA-mYu">
                                 <rect key="frame" x="20" y="318" width="104" height="31"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -475,7 +395,7 @@
                                     <rect key="frame" x="20" y="312" width="104" height="31"/>
                                 </variation>
                                 <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="20" y="299" width="103" height="30"/>
+                                    <rect key="frame" x="20" y="366" width="103" height="30"/>
                                 </variation>
                                 <variation key="widthClass=regular" fixedFrame="YES">
                                     <rect key="frame" x="20" y="337" width="104" height="31"/>
@@ -487,43 +407,95 @@
                                     <rect key="frame" x="20" y="274" width="103" height="29"/>
                                 </variation>
                                 <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="20" y="343" width="100" height="35"/>
+                                    <rect key="frame" x="20" y="401" width="100" height="35"/>
                                 </variation>
                                 <variation key="heightClass=regular-widthClass=regular" fixedFrame="YES">
                                     <rect key="frame" x="20" y="397" width="107" height="29"/>
                                 </variation>
                             </label>
-                            <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="45O-Tk-B36">
-                                <rect key="frame" x="141" y="270" width="121" height="29"/>
-                                <segments>
-                                    <segment title="WI"/>
-                                    <segment title="NON"/>
-                                </segments>
+                            <pickerView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="qzi-QJ-9BO">
+                                <rect key="frame" x="332" y="226" width="209" height="52"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <color key="tintColor" red="0.40000000600000002" green="1" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
                                 <variation key="heightClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="129" y="171" width="121" height="29"/>
+                                    <rect key="frame" x="331" y="133" width="198" height="49"/>
+                                </variation>
+                                <variation key="heightClass=regular" fixedFrame="YES">
+                                    <rect key="frame" x="324" y="226" width="217" height="45"/>
                                 </variation>
                                 <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="138" y="261" width="121" height="29"/>
+                                    <rect key="frame" x="138" y="252" width="116" height="53"/>
                                 </variation>
                                 <variation key="widthClass=regular" fixedFrame="YES">
-                                    <rect key="frame" x="141" y="287" width="121" height="29"/>
+                                    <rect key="frame" x="160" y="262" width="131" height="50"/>
                                 </variation>
                                 <variation key="heightClass=compact-widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="140" y="200" width="121" height="29"/>
+                                    <rect key="frame" x="265" y="166" width="115" height="64"/>
                                 </variation>
                                 <variation key="heightClass=compact-widthClass=regular" fixedFrame="YES">
-                                    <rect key="frame" x="147" y="237" width="121" height="29"/>
+                                    <rect key="frame" x="313" y="193" width="241" height="52"/>
                                 </variation>
                                 <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="141" y="295" width="121" height="29"/>
+                                    <rect key="frame" x="141" y="284" width="225" height="70"/>
                                 </variation>
                                 <variation key="heightClass=regular-widthClass=regular" fixedFrame="YES">
-                                    <rect key="frame" x="141" y="309" width="121" height="29"/>
+                                    <rect key="frame" x="141" y="259" width="400" height="76"/>
                                 </variation>
-                                <connections>
-                                    <action selector="getselectedValueOfRendezvous:" destination="fUG-E1-oDI" eventType="valueChanged" id="Xp9-fR-flE"/>
-                                </connections>
-                            </segmentedControl>
+                            </pickerView>
+                            <label opaque="NO" userInteractionEnabled="NO" alpha="0.40000000596046448" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Eta:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GT2-Dw-wR7">
+                                <rect key="frame" x="275" y="226" width="41" height="31"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.40000000600000002" green="1" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="heightClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="248" y="126" width="104" height="31"/>
+                                </variation>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="20" y="264" width="36" height="30"/>
+                                </variation>
+                                <variation key="widthClass=regular" fixedFrame="YES">
+                                    <rect key="frame" x="20" y="271" width="52" height="31"/>
+                                </variation>
+                                <variation key="heightClass=compact-widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="229" y="165" width="40" height="30"/>
+                                </variation>
+                                <variation key="heightClass=compact-widthClass=regular" fixedFrame="YES">
+                                    <rect key="frame" x="275" y="199" width="39" height="29"/>
+                                </variation>
+                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="20" y="304" width="37" height="30"/>
+                                </variation>
+                                <variation key="heightClass=regular-widthClass=regular" fixedFrame="YES">
+                                    <rect key="frame" x="20" y="259" width="107" height="29"/>
+                                </variation>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" alpha="0.40000000000000002" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Rezilta" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="v1b-HL-ITV">
+                                <rect key="frame" x="141" y="413" width="400" height="113"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.40000000600000002" green="1" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="heightClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="129" y="289" width="400" height="76"/>
+                                </variation>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="138" y="476" width="235" height="104"/>
+                                </variation>
+                                <variation key="widthClass=regular" fixedFrame="YES">
+                                    <rect key="frame" x="100" y="455" width="400" height="104"/>
+                                </variation>
+                                <variation key="heightClass=compact-widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="184" y="278" width="196" height="67"/>
+                                </variation>
+                                <variation key="heightClass=compact-widthClass=regular" fixedFrame="YES">
+                                    <rect key="frame" x="575" y="119" width="187" height="208"/>
+                                </variation>
+                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="20" y="580" width="346" height="200"/>
+                                </variation>
+                                <variation key="heightClass=regular-widthClass=regular" fixedFrame="YES">
+                                    <rect key="frame" x="141" y="520" width="400" height="104"/>
+                                </variation>
+                            </label>
                             <label opaque="NO" userInteractionEnabled="NO" alpha="0.40000000596046448" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Randevou la:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ddo-63-ujC">
                                 <rect key="frame" x="20" y="273" width="104" height="31"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -533,10 +505,10 @@
                                     <rect key="frame" x="20" y="169" width="104" height="31"/>
                                 </variation>
                                 <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="15" y="260" width="103" height="30"/>
+                                    <rect key="frame" x="15" y="320" width="103" height="30"/>
                                 </variation>
                                 <variation key="widthClass=regular" fixedFrame="YES">
-                                    <rect key="frame" x="20" y="284" width="104" height="31"/>
+                                    <rect key="frame" x="299" y="271" width="104" height="31"/>
                                 </variation>
                                 <variation key="heightClass=compact-widthClass=compact" fixedFrame="YES">
                                     <rect key="frame" x="20" y="200" width="104" height="30"/>
@@ -545,19 +517,50 @@
                                     <rect key="frame" x="20" y="236" width="103" height="29"/>
                                 </variation>
                                 <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="20" y="291" width="100" height="35"/>
+                                    <rect key="frame" x="20" y="361" width="100" height="35"/>
                                 </variation>
                                 <variation key="heightClass=regular-widthClass=regular" fixedFrame="YES">
-                                    <rect key="frame" x="20" y="309" width="107" height="29"/>
+                                    <rect key="frame" x="20" y="359" width="107" height="29"/>
                                 </variation>
                             </label>
+                            <segmentedControl opaque="NO" alpha="0.40000000000000002" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="45O-Tk-B36">
+                                <rect key="frame" x="141" y="270" width="121" height="29"/>
+                                <segments>
+                                    <segment title="WI"/>
+                                    <segment title="NON"/>
+                                </segments>
+                                <variation key="heightClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="129" y="171" width="121" height="29"/>
+                                </variation>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="138" y="321" width="91" height="29"/>
+                                </variation>
+                                <variation key="widthClass=regular" fixedFrame="YES">
+                                    <rect key="frame" x="420" y="272" width="121" height="29"/>
+                                </variation>
+                                <variation key="heightClass=compact-widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="140" y="202" width="89" height="29"/>
+                                </variation>
+                                <variation key="heightClass=compact-widthClass=regular" fixedFrame="YES">
+                                    <rect key="frame" x="147" y="237" width="121" height="29"/>
+                                </variation>
+                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="141" y="365" width="98" height="29"/>
+                                </variation>
+                                <variation key="heightClass=regular-widthClass=regular" fixedFrame="YES">
+                                    <rect key="frame" x="141" y="359" width="121" height="29"/>
+                                </variation>
+                                <connections>
+                                    <action selector="getselectedValueOfRendezvous:" destination="fUG-E1-oDI" eventType="valueChanged" id="Xp9-fR-flE"/>
+                                </connections>
+                            </segmentedControl>
                         </subviews>
                         <color key="backgroundColor" red="0.20000000300000001" green="0.20000000300000001" blue="0.20000000300000001" alpha="1" colorSpace="calibratedRGB"/>
                         <color key="tintColor" red="0.40000000600000002" green="1" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
                         <variation key="widthClass=compact" layoutMarginsFollowReadableWidth="NO" preservesSuperviewLayoutMargins="YES">
                             <mask key="subviews">
-                                <include reference="45O-Tk-B36"/>
                                 <include reference="Ddo-63-ujC"/>
+                                <include reference="45O-Tk-B36"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=regular-widthClass=compact">
@@ -567,11 +570,11 @@
                                 <include reference="CrG-AM-fc1"/>
                                 <include reference="OjA-hD-bc0"/>
                                 <include reference="1aH-YB-u3p"/>
-                                <include reference="v1b-HL-ITV"/>
                                 <include reference="hOI-de-mcX"/>
                                 <include reference="P9K-HN-BBA"/>
                                 <include reference="qzi-QJ-9BO"/>
                                 <include reference="GT2-Dw-wR7"/>
+                                <include reference="v1b-HL-ITV"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=regular-widthClass=regular">
@@ -596,7 +599,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2ii-Tw-cKu" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1351" y="549"/>
+            <point key="canvasLocation" x="1350" y="549"/>
         </scene>
     </scenes>
 </document>

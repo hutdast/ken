@@ -12,7 +12,6 @@
 		B7828AC71C263C080098C5D0 /* CheckBoxButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7828AC61C263C080098C5D0 /* CheckBoxButton.swift */; };
 		B7E4CC9F1C1EF3F5003EC434 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7E4CC9E1C1EF3F5003EC434 /* AppDelegate.swift */; };
 		B7E4CCA11C1EF3F5003EC434 /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7E4CCA01C1EF3F5003EC434 /* WelcomeViewController.swift */; };
-		B7E4CCA41C1EF3F5003EC434 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B7E4CCA21C1EF3F5003EC434 /* Main.storyboard */; };
 		B7E4CCA61C1EF3F5003EC434 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B7E4CCA51C1EF3F5003EC434 /* Assets.xcassets */; };
 		B7E4CCA91C1EF3F5003EC434 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B7E4CCA71C1EF3F5003EC434 /* LaunchScreen.storyboard */; };
 		B7E4CCB41C1EF3F5003EC434 /* KenelLaraqueTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7E4CCB31C1EF3F5003EC434 /* KenelLaraqueTests.swift */; };
@@ -32,6 +31,7 @@
 		B7EFFC111C245192002B1080 /* FMDatabaseAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = B7EFFC0B1C245192002B1080 /* FMDatabaseAdditions.m */; };
 		B7EFFC121C245192002B1080 /* FMDatabasePool.m in Sources */ = {isa = PBXBuildFile; fileRef = B7EFFC0D1C245192002B1080 /* FMDatabasePool.m */; };
 		B7FC97BC1C2787DD00D20BFD /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7FC97BB1C2787DD00D20BFD /* DataManager.swift */; };
+		B7FC97C01C27ED1900D20BFD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B7FC97BF1C27ED1900D20BFD /* Main.storyboard */; };
 		C15A97F0B0AAC341503E0083 /* Pods_KenelLaraque.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CDA8DCABDC73FEBCCFC575F8 /* Pods_KenelLaraque.framework */; };
 /* End PBXBuildFile section */
 
@@ -60,7 +60,6 @@
 		B7E4CC9B1C1EF3F5003EC434 /* KenelLaraque.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KenelLaraque.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B7E4CC9E1C1EF3F5003EC434 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B7E4CCA01C1EF3F5003EC434 /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
-		B7E4CCA31C1EF3F5003EC434 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		B7E4CCA51C1EF3F5003EC434 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B7E4CCA81C1EF3F5003EC434 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B7E4CCAA1C1EF3F5003EC434 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -92,6 +91,7 @@
 		B7EFFC0C1C245192002B1080 /* FMDatabasePool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FMDatabasePool.h; path = KenelLaraque/FMDatabasePool.h; sourceTree = "<group>"; };
 		B7EFFC0D1C245192002B1080 /* FMDatabasePool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FMDatabasePool.m; path = KenelLaraque/FMDatabasePool.m; sourceTree = "<group>"; };
 		B7FC97BB1C2787DD00D20BFD /* DataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
+		B7FC97BF1C27ED1900D20BFD /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		CDA8DCABDC73FEBCCFC575F8 /* Pods_KenelLaraque.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_KenelLaraque.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D8027FD3C7FC9227E2F86213 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -184,8 +184,8 @@
 			children = (
 				B7E4CC9E1C1EF3F5003EC434 /* AppDelegate.swift */,
 				B7FC97BB1C2787DD00D20BFD /* DataManager.swift */,
+				B7FC97BF1C27ED1900D20BFD /* Main.storyboard */,
 				B7E4CCA01C1EF3F5003EC434 /* WelcomeViewController.swift */,
-				B7E4CCA21C1EF3F5003EC434 /* Main.storyboard */,
 				B7E4CCA51C1EF3F5003EC434 /* Assets.xcassets */,
 				B7E4CCA71C1EF3F5003EC434 /* LaunchScreen.storyboard */,
 				B7E4CCAA1C1EF3F5003EC434 /* Info.plist */,
@@ -355,7 +355,7 @@
 				B7E4CCA91C1EF3F5003EC434 /* LaunchScreen.storyboard in Resources */,
 				B7E4CCA61C1EF3F5003EC434 /* Assets.xcassets in Resources */,
 				B7EFFBED1C2437A4002B1080 /* Podfile in Resources */,
-				B7E4CCA41C1EF3F5003EC434 /* Main.storyboard in Resources */,
+				B7FC97C01C27ED1900D20BFD /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -474,14 +474,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		B7E4CCA21C1EF3F5003EC434 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				B7E4CCA31C1EF3F5003EC434 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		B7E4CCA71C1EF3F5003EC434 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
