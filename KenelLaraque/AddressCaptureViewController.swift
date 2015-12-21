@@ -7,34 +7,29 @@
 //
 
 import UIKit
-import Alamofire
 import SwiftyJSON
-
 class AddressCaptureViewController: UIViewController, UIPickerViewDelegate {
     
     
     
-   
-    @IBOutlet weak var resultButton: UIButton!
-    @IBOutlet weak var rendezVous: UISegmentedControl!
-    @IBOutlet weak var city: UITextField!
+    
+    
     @IBOutlet weak var statePicker: UIPickerView!
-    @IBOutlet weak var result: UILabel!
+    @IBOutlet weak var rendezVous: UISegmentedControl!
     @IBOutlet weak var comment: UITextField!
-    @IBOutlet weak var addressOfLocation: UITextField!
+    @IBOutlet weak var city: UITextField!
+    @IBOutlet weak var result: UILabel!
     @IBOutlet weak var nameOfAddress: UITextField!
+    @IBOutlet weak var addressOfLocation: UITextField!
     var haveRendezVous = Bool()
     var pickerData: [String] = [String]()
-    var tempDB:DataManager!
+    var tempDB =  DataManager()
     var stateAdr: String = String()
-    var lat = Double()
-    var lng  = Double()
     
     override func viewWillAppear(animated: Bool) {
         comment.text = "Fè yon remak sou plas sa"
         self.statePicker.delegate = self
-        self.resultButton.enabled = false
-        self.resultButton.setTitle("POKO FINI", forState: UIControlState.Normal)
+        
         pickerData = [
             "Alabama", "Alaska", "American Samoa", "Arizona", "Arkansas", "California", "Colorado", "Connecticut", "Delaware", "District of Columbia", "Florida", "Georgia", "Guam", "Hawaii", "Idaho", "Illinois", "Indiana", "Iowa", "Kansas", "Kentucky", "Louisiana", "Maine", "Maryland", "Massachusetts", "Michigan", "Minnesota", "Mississippi", "Missouri", "Montana", "Nebraska", "Nevada", "New Hampshire", "New Jersey", "New Mexico", "New York", "North Carolina", "North Dakota", "Northern Marianas Islands", "Ohio", "Oklahoma", "Oregon", "Pennsylvania", "Puerto Rico", "Rhode Island", "South Carolina", "South Dakota", "Tennessee", "Texas", "Utah", "Vermont", "Virginia", "Virgin Islands", "Washington", "West Virginia", "Wisconsin", "Wyoming"]
         
@@ -43,19 +38,7 @@ class AddressCaptureViewController: UIViewController, UIPickerViewDelegate {
     
     
     
-    
-    
-    
-    
-    @IBAction func checkUserInputs(sender: UITextField) {
-        if sender.editing{
-            saveEntryTODatabase()
-            print("comment is being edited")
-        }
-    }
-    
     @IBAction func getselectedValueOfRendezvous(sender: AnyObject) {
-        
         switch rendezVous.selectedSegmentIndex
         {
         case 0:
@@ -70,61 +53,83 @@ class AddressCaptureViewController: UIViewController, UIPickerViewDelegate {
         
     }
     
-    @IBAction func sendResult(sender: AnyObject)
-    {
-        //result.text = "longitude: \(lng)"
-        
-        print("GO TO NEXT VIEW IT IS SAFE TO SAVE!!!!")
-        
-        
+    
+    
+    
+    
+    @IBAction func checkInputs(sender: UITextField) {
+        if sender.editing == true{
+            prepareForDatabase()
+        }
     }
     
-    func saveEntryTODatabase()
+    @IBAction func sendResult(sender: UIButton) {
+    }
+    
+    func prepareForDatabase()
     {
         let name: String = nameOfAddress.text!
         let location: String = addressOfLocation.text!
         let citY: String = city.text!
-        
+        var lat = Double()
+        var lng  = Double()
         
         
         if name.isEmpty || location.isEmpty || citY.isEmpty
         {
             result.text = "OU BLIYE REMPLI YOUN"
-        }
             
-        else {//entry validation
-            
+        }else
+        {
             let modified = tempDB.modifyAddressForAPiUse(location, city: citY, state: stateAdr)
-            let urlRequest = tempDB.connectToGoogleAPI(modified).urlRequest
-            let apiSession = tempDB.connectToGoogleAPI(modified).apiSession
-            let jsonData:JSON = tempDB.getApiResponse(apiSession, urlRequest: urlRequest)
+            let session =  tempDB.connectToGoogleAPI( modified).apiSession
+            let urlRequest = tempDB.connectToGoogleAPI( modified).urlRequest
             
             
-            if jsonData["status"] == "ZERO_RESULTS"
-            {
-                self.result.text = "Cheke adrès la"
-            }
-            else{// save to db
-                self.lat = jsonData["results"][0]["geometry"]["location"]["lat"].double
+            let task = session.dataTaskWithRequest(urlRequest,completionHandler: { (data, response, error) in
+                if(error != nil){ print("there is an error")}
+                guard let responseData = data else {  return}
+                guard error == nil else { return}
                 
-                self.lng = jsonData["results"][0]["geometry"]["location"]["lng"]?.double!
                 
-                if  self.tempDB.insertIntoDatabase(name, comment: self.comment.text!, rendezvous: self.haveRendezVous, lat:self.lat, lng: self.lng)
-                {//check for duplicates
-                    self.resultButton.enabled = true
-                    self.resultButton.setTitle("Kontinye", forState: UIControlState.Normal)
-                    self.result.text = "longitude: \(self.lng)"
-                }
-                else
+                
+                
+                let results = JSON(data: responseData)
+                /** cannot send the JSON object out needs to be parsed into a dictionary
+                otherwise you will get a nil err => 😡unexpectedly found nil while unwrapping an Optional value
+                */
+                //if status is ok first
+                
+                if results["status"] == "ZERO_RESULTS"
                 {
-                    self.result.text = "OU rantre non sa deja"
+                    self.result.text = "On erè nan adrès la"
+                }else
+                {
+                    lat = results["results"][0]["geometry"]["location"]["lat"].doubleValue
+                    lng = results["results"][0]["geometry"]["location"]["lng"].doubleValue
+                    if  self.tempDB.insertIntoDatabase(name, comment: self.comment.text!, rendezvous: self.haveRendezVous , lat: lat, lng: lng)
+                    {
+                        self.result.text = "Anrijistre \n non: \(name)\n adrès: \(location)"
+                        print("IT IS SAVED ....")
+                    }else
+                    {
+                        self.result.text = "Ou gen \(name) sa deja"
+                    }
+                    
                 }
-            }// end of save to db
+                
+                
+                
+                
+                
+            })
+            task.resume()
             
-            
-        }// end of entry validation
-    }//end of funcsaveEntryTODatabase()
-    
+        }
+        
+        
+        
+    }
     
     // The number of columns of data
     func numberOfComponentsInPickerView(pickerView: UIPickerView) -> Int {
