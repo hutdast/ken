@@ -13,10 +13,10 @@ import SQLite
 
 class DataManager: NSObject{
     
-     private var databasePath = NSString()
+    private var databasePath = NSString()
     private var placeDB = FMDatabase()
     
-   override init() {
+    override init() {
         print("init from data manager is invoked")
         let filemgr = NSFileManager.defaultManager()
         let path = NSSearchPathForDirectoriesInDomains(
@@ -28,8 +28,6 @@ class DataManager: NSObject{
             placeDB = FMDatabase(path: databasePath as String)
             if placeDB.open() {
                 let sql_stmt = "CREATE TABLE IF NOT EXISTS place (ID INTEGER PRIMARY KEY AUTOINCREMENT, NAME TEXT UNIQUE, COMMENT TEXT, RENDEZVOUS TEXT, LATITUDE DOUBLE, LONGITUDE DOUBLE)"
-                print("statement is executed")
-                
                 if !placeDB.executeStatements(sql_stmt) {
                     print("Error: \(placeDB.lastErrorMessage())")
                 }
@@ -37,11 +35,11 @@ class DataManager: NSObject{
             } else {
                 print("Error: \(placeDB.lastErrorMessage())")
             }
-
+            
         }else{
-             placeDB = FMDatabase(path: databasePath as String)
+            placeDB = FMDatabase(path: databasePath as String)
         }
-
+        
         
     }//end of startHelper()
     
@@ -50,10 +48,10 @@ class DataManager: NSObject{
     
     
     
-     func displayAllFromDatabase() ->
+    func displayAllFromDatabase() ->
         (id: [Int32], name: [String], comment:[String], rendezvous:[Bool], latitude: [Double],longitude:[Double])
     {
-       
+        
         var id: [Int32] = [Int32]()
         
         var name: [String] = [String]()
@@ -95,7 +93,7 @@ class DataManager: NSObject{
     
     func insertIntoDatabase(name: String,comment:String, rendezvous:Bool,lat:Double, lng: Double) ->(Bool)
     {
-      var isSaved = Bool()
+        var isSaved = Bool()
         
         if placeDB.open() {
             
@@ -103,7 +101,7 @@ class DataManager: NSObject{
             
             let result = placeDB.executeUpdate(insertSQL,
                 withArgumentsInArray: nil)
-           
+            
             isSaved = true
             if !result {
                 isSaved = false
@@ -116,10 +114,42 @@ class DataManager: NSObject{
             print("Error: \(placeDB.lastErrorMessage())")
         }
         
-         placeDB.close()
+        placeDB.close()
+        
         return  isSaved
         
     }//end of insertIntoDatabase
+    
+    
+    func updateEntriesToDb(name: String,comment:String, rendezvous:Bool, recordName:String) -> Bool
+    {
+        //name: String,comment:String, rendezvous:Bool,lat:Double, lng: Double, recordName:String
+        var isSaved = Bool()
+        if placeDB.open()
+        {
+            //don't forget to put quotation mark around variable when entering sql statements
+            let insertSQL = "UPDATE place SET name = '\(name)',comment = '\(comment)',rendezvous = '\(rendezvous)' WHERE name = '\(recordName)'"
+            
+            
+            let result = placeDB.executeUpdate(insertSQL,
+                withArgumentsInArray: nil)
+            print("statemenet update is a go")
+            isSaved = true
+            if !result
+            {
+                isSaved = false
+                print("Error: \(placeDB.lastErrorMessage())")
+            }
+        } else
+        {
+            isSaved = false
+            print("Error: \(placeDB.lastErrorMessage())")
+            
+        }
+        return isSaved
+        
+    }//end of updateEntriesToDb
+    
     
     
     func modifyAddressForAPiUse(streetAddress: String, city:String, state:String)-> String{
@@ -139,7 +169,8 @@ class DataManager: NSObject{
         return returnAddress
     }
     
-    func connectToGoogleAPI(modifiedAddress: String)->(apiSession:NSURLSession, urlRequest:NSURLRequest){
+    func connectToGoogleAPI(modifiedAddress: String)->(apiSession:NSURLSession, urlRequest:NSURLRequest)
+    {
         let googleKey : String = "AIzaSyBVmwkvF5l4lJndXR3_lw_DtWKZ9DdqwxQ"//server key
         
         
@@ -149,56 +180,19 @@ class DataManager: NSObject{
         let urlObject = NSURL(string:stringUrl)
         
         let urlRequest = NSURLRequest(URL: urlObject!)
-        let config = NSURLSessionConfiguration.ephemeralSessionConfiguration()
-        //NSURLSessionConfiguration.defaultSessionConfiguration()
+        //let config = NSURLSessionConfiguration.ephemeralSessionConfiguration()
+        let config = NSURLSessionConfiguration.defaultSessionConfiguration()
         let session = NSURLSession(configuration: config)
         return(session,urlRequest )
-
-    }
-    
-    
-   
-    
-    func getApiResponse(apiSession:NSURLSession, urlRequest:NSURLRequest) ->(JSON)
-    {
-       
-     
-        var success:Bool = Bool()
-        let forSakeOfOptional = "{\"entryID\": 1,\"from\": \"String\",\"to\": \"String\",\"value\": \"String\"}"
-        var  results: JSON! = JSON(forSakeOfOptional)
         
-            
-        let task = apiSession.dataTaskWithRequest(urlRequest,completionHandler: { (data, response, error) in
-            if(error != nil){
-                print("there is an error")
-            }
-            guard let responseData = data else {
-                print("Error: did not receive data")
-                success = false
-                return
-            }
-            guard error == nil else {
-                print("error calling the api")
-                print(error)
-               success = false
-                return
-            }
-            
-            print("Success after guard error..:\(success)\n")
-            results = JSON(data: responseData)
-        
-            
-                      
-        })
-        task.resume()
-        return (results)
-        
-    }//end of searchService()
-
+    }//end of connectToGoogleAPI(modifiedAddress: String)->(apiSession:NSURLSession, urlRequest:NSURLRequest)
     
     
     
-       
+    
+    
+    
+    
     
     deinit{
         
