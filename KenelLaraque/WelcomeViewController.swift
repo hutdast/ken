@@ -9,38 +9,39 @@
 import UIKit
 
 class WelcomeViewController: UIViewController {
-
-     let tempDB = DataManager()
-    var crossOverData: [String] = [String]()
+    
+    var tempDB: DataManager!
+    
     
     override func viewDidLoad() {
+        tempDB = DataManager()
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        crossOverData = tempDB.displayAllFromDatabase().name
-       // tempDB.displayAllFromDatabase()
         
-     
+        
+        
     }
     
-   
+    
     // How to set the orientation.
     override func supportedInterfaceOrientations() -> UIInterfaceOrientationMask {
         return UIInterfaceOrientationMask.All
     }
-       
+    
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if segue.identifier == "showList" {
             if let destination = segue.destinationViewController as? ChoicesTableViewController {
-                    destination.listOfAddresses = crossOverData
+                destination.tempDB = tempDB
             }
         }else if segue.identifier == "registerInfo" {
             if let destination = segue.destinationViewController as? AddressCaptureViewController {
                 destination.tempDB = tempDB
+                
             }
-
+            
         }
-}//end of prepareForSegue
-        
+    }//end of prepareForSegue
+    
     
     
     
@@ -48,7 +49,11 @@ class WelcomeViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-
+    
+    override func viewWillDisappear(animated: Bool) {
+        
+        print("Welcome WillDisappear evoke!")
+    }
     
     
     
@@ -56,6 +61,6 @@ class WelcomeViewController: UIViewController {
     
     
     
-
+    
 }//end of class
 

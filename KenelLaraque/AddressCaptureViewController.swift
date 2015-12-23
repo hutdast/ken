@@ -24,13 +24,16 @@ class AddressCaptureViewController: UIViewController, UIPickerViewDelegate {
     }
     enum AppProgressionChecks{
         case Regular
-        case SaveInDB
-        case NotSaveInDB
+        case startView
+        case stopView
         case NewEntry//clear out all inputs
         case UpdateRecord //if user accept the name that is already in DB
     }
     
     
+    
+    
+    @IBOutlet var scrollingView: UIScrollView!
     @IBOutlet weak var savingActivity: UIActivityIndicatorView!
     @IBOutlet weak var resultButton: UIButton!
     @IBOutlet weak var statePicker: UIPickerView!
@@ -40,29 +43,53 @@ class AddressCaptureViewController: UIViewController, UIPickerViewDelegate {
     @IBOutlet weak var result: UILabel!
     @IBOutlet weak var nameOfAddress: UITextField!
     @IBOutlet weak var addressOfLocation: UITextField!
-    var haveRendezVous = Bool()
-    var pickerData = [String]()
+    var haveRendezVous: Bool!
+    var pickerData: [String]!
     var tempDB: DataManager!
-    var stateAdr = String()
-    var msgVar = MessageType.NoErr
-    var appCheck = AppProgressionChecks.Regular
+    var stateAdr: String!
+    var msgVar: MessageType!
+    var appCheck: AppProgressionChecks!
     
     
     override func viewDidLoad()
     {
         super.viewDidLoad()
-        comment.text = "Fè yon remak sou plas sa"
-        self.statePicker.delegate = self
-        self.resultButton.setTitle("Kontinye", forState: UIControlState.Normal)
-        haveRendezVous = true
-        
-        pickerData = [
-            "Chwazi Eta ☟", "Alabama", "Alaska", "American Samoa", "Arizona", "Arkansas", "California", "Colorado", "Connecticut", "Delaware", "District of Columbia", "Florida", "Georgia", "Guam", "Hawaii", "Idaho", "Illinois", "Indiana", "Iowa", "Kansas", "Kentucky", "Louisiana", "Maine", "Maryland", "Massachusetts", "Michigan", "Minnesota", "Mississippi", "Missouri", "Montana", "Nebraska", "Nevada", "New Hampshire", "New Jersey", "New Mexico", "New York", "North Carolina", "North Dakota", "Northern Marianas Islands", "Ohio", "Oklahoma", "Oregon", "Pennsylvania", "Puerto Rico", "Rhode Island", "South Carolina", "South Dakota", "Tennessee", "Texas", "Utah", "Vermont", "Virginia", "Virgin Islands", "Washington", "West Virginia", "Wisconsin", "Wyoming"]
+        appCheck = AppProgressionChecks.startView
+        initializeGlobals(appCheck)
         
         
     }
     
-    
+    func initializeGlobals(app:AppProgressionChecks){
+        switch app
+        {
+        case .startView:
+            scrollingView.contentSize.height = 800
+            
+            
+            addressOfLocation.keyboardType = UIKeyboardType.NamePhonePad
+            city.keyboardType = UIKeyboardType.NamePhonePad
+            self.statePicker.delegate = self
+            self.resultButton.setTitle("Kontinye", forState: UIControlState.Normal)
+            haveRendezVous = true
+            stateAdr = String()
+            msgVar = MessageType.NoErr
+            appCheck = AppProgressionChecks.Regular
+            pickerData = [
+                "Chwazi Eta ☟", "Alabama", "Alaska", "American Samoa", "Arizona", "Arkansas", "California", "Colorado", "Connecticut", "Delaware", "District of Columbia", "Florida", "Georgia", "Guam", "Hawaii", "Idaho", "Illinois", "Indiana", "Iowa", "Kansas", "Kentucky", "Louisiana", "Maine", "Maryland", "Massachusetts", "Michigan", "Minnesota", "Mississippi", "Missouri", "Montana", "Nebraska", "Nevada", "New Hampshire", "New Jersey", "New Mexico", "New York", "North Carolina", "North Dakota", "Northern Marianas Islands", "Ohio", "Oklahoma", "Oregon", "Pennsylvania", "Puerto Rico", "Rhode Island", "South Carolina", "South Dakota", "Tennessee", "Texas", "Utah", "Vermont", "Virginia", "Virgin Islands", "Washington", "West Virginia", "Wisconsin", "Wyoming"]
+        case .stopView:
+            
+            self.statePicker.delegate = nil
+            haveRendezVous = nil
+            stateAdr = nil
+            msgVar = nil
+            appCheck = nil
+        default:
+            print("nothing to add")
+            
+        }
+        
+    }//end of initializeGlobals()
     
     @IBAction func deactivateResultButton(sender: AnyObject)
     {
@@ -88,10 +115,12 @@ class AddressCaptureViewController: UIViewController, UIPickerViewDelegate {
     
     func checkForEmptyInputs() -> (Bool)
     {
+        
         let address = addressOfLocation.text!
         let userCity = city.text!
         let state  = stateAdr
-        if address.isEmpty || userCity.isEmpty || state.isEmpty
+        
+        if address.isEmpty || userCity.isEmpty || state.isEmpty || state == "Chwazi Eta ☟"
         {
             return true
             
@@ -99,7 +128,6 @@ class AddressCaptureViewController: UIViewController, UIPickerViewDelegate {
         {
             return false
         }
-        
     }
     
     
@@ -110,7 +138,7 @@ class AddressCaptureViewController: UIViewController, UIPickerViewDelegate {
         let address = addressOfLocation.text!
         let userCity = city.text!
         let state  = stateAdr
-        let name = nameOfAddress.text!
+        let name: String = nameOfAddress.text!
         let tempStorage =  tempDB.displayAllFromDatabase().name.filter({$0 == name})
         if  checkForEmptyInputs() == true{
             msgVar = MessageType.EmptyUserInput
@@ -119,7 +147,7 @@ class AddressCaptureViewController: UIViewController, UIPickerViewDelegate {
         }else if !tempStorage.isEmpty
         {
             msgVar = MessageType.DuplicateDBEntry(name)
-            alertMessageHandler(msgVar, bundler: ["Doubl", "Ou gen non \(name) sa deja", "Kembe'l","Ranplace'l", repeatedWords.onlot, repeatedWords.poko], twoBtns: true)
+            alertMessageHandler(msgVar, bundler: ["Doubl", "Ou gen non \(name) sa deja", "Kembe'l","Chanje non", repeatedWords.onlot, repeatedWords.poko], twoBtns: true)
             
         }else
         {
@@ -201,9 +229,11 @@ class AddressCaptureViewController: UIViewController, UIPickerViewDelegate {
             
             
             task.resume()
+            task.suspend()
         }//end of global dispatch
         
-    }//end of searchForLocationThruGoogle(apiSession:NSURLSession, urlRequest:NSURLRequest)->(lat:Double, lng:Double)
+    }//end of searchForLocationThruGoogle(apiSession:NSURLSession, urlRequest:NSURLRequest)
+    
     
     func alertMessageHandler( errType: MessageType, bundler:[String], twoBtns:Bool)
     {
@@ -223,6 +253,7 @@ class AddressCaptureViewController: UIViewController, UIPickerViewDelegate {
                 self.resultButton.setTitle(bundler[4], forState: UIControlState.Normal)
                 self.tempDB.updateEntriesToDb(recordName, comment: self.comment.text!, rendezvous: self.haveRendezVous, recordName: recordName)
             case .AddressVerification(let lat , let lng):
+                alertController.dismissViewControllerAnimated(true, completion: nil)
                 self.resultButton.setTitle(bundler[4], forState: UIControlState.Normal)
                 self.tempDB.insertIntoDatabase(self.nameOfAddress.text!, comment: self.comment.text!, rendezvous: self.haveRendezVous, lat: lat, lng: lng)
             case .AddressUnavailable:
@@ -258,12 +289,25 @@ class AddressCaptureViewController: UIViewController, UIPickerViewDelegate {
             self.presentViewController(alertController, animated: true, completion: nil)
         }
         
+    }//end of alertMessageHandler( errType: MessageType, bundler:[String], twoBtns:Bool)
+    
+    
+    override func viewWillDisappear(animated: Bool) {
+        tempDB = nil
+        appCheck = AppProgressionChecks.stopView
+        initializeGlobals(appCheck)
+        
+        print(" Address viewWillDisappear evoked!")
     }
     
-    
-    
-    
-    
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+        // Dispose of any resources that can be recreated.
+        tempDB = nil
+        appCheck = AppProgressionChecks.stopView
+        initializeGlobals(appCheck)
+        print("did receive memory warning evoke!")
+    }
     
     
     
