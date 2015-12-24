@@ -8,7 +8,7 @@
 
 import UIKit
 import SwiftyJSON
-class AddressCaptureViewController: UIViewController, UIPickerViewDelegate {
+class AddressCaptureViewController: UIViewController, UIPickerViewDelegate, UIScrollViewDelegate {
     
     enum MessageType
     {
@@ -24,7 +24,7 @@ class AddressCaptureViewController: UIViewController, UIPickerViewDelegate {
     }
     enum AppProgressionChecks{
         case Regular
-        case startView
+      case startView
         case stopView
         case NewEntry//clear out all inputs
         case UpdateRecord //if user accept the name that is already in DB
@@ -54,20 +54,23 @@ class AddressCaptureViewController: UIViewController, UIPickerViewDelegate {
     override func viewDidLoad()
     {
         super.viewDidLoad()
-        appCheck = AppProgressionChecks.startView
+         appCheck = AppProgressionChecks.startView
         initializeGlobals(appCheck)
-        
-        
+       
+       
     }
     
     func initializeGlobals(app:AppProgressionChecks){
         switch app
         {
         case .startView:
-            scrollingView.contentSize.height = 800
+            //let logo = UIView()
+            //logo.frame = CGRect(x: 0, y: 0, width: 120, height: 120)
+            //scrollingView.addSubview(logo)
+            scrollingView.contentSize = CGSize(width: 0, height: 900)
+           
             
-            
-            addressOfLocation.keyboardType = UIKeyboardType.NamePhonePad
+             addressOfLocation.keyboardType = UIKeyboardType.NamePhonePad
             city.keyboardType = UIKeyboardType.NamePhonePad
             self.statePicker.delegate = self
             self.resultButton.setTitle("Kontinye", forState: UIControlState.Normal)
@@ -78,21 +81,31 @@ class AddressCaptureViewController: UIViewController, UIPickerViewDelegate {
             pickerData = [
                 "Chwazi Eta ☟", "Alabama", "Alaska", "American Samoa", "Arizona", "Arkansas", "California", "Colorado", "Connecticut", "Delaware", "District of Columbia", "Florida", "Georgia", "Guam", "Hawaii", "Idaho", "Illinois", "Indiana", "Iowa", "Kansas", "Kentucky", "Louisiana", "Maine", "Maryland", "Massachusetts", "Michigan", "Minnesota", "Mississippi", "Missouri", "Montana", "Nebraska", "Nevada", "New Hampshire", "New Jersey", "New Mexico", "New York", "North Carolina", "North Dakota", "Northern Marianas Islands", "Ohio", "Oklahoma", "Oregon", "Pennsylvania", "Puerto Rico", "Rhode Island", "South Carolina", "South Dakota", "Tennessee", "Texas", "Utah", "Vermont", "Virginia", "Virgin Islands", "Washington", "West Virginia", "Wisconsin", "Wyoming"]
         case .stopView:
-            
-            self.statePicker.delegate = nil
+          
+             self.statePicker.delegate = nil
             haveRendezVous = nil
             stateAdr = nil
-            msgVar = nil
-            appCheck = nil
+             msgVar = nil
+             appCheck = nil
         default:
             print("nothing to add")
-            
+         
         }
-        
+       
     }//end of initializeGlobals()
+    
+    func viewForZoomingInScrollView(scrollView: UIScrollView) -> UIView? {
+        scrollView.minimumZoomScale = 0.5
+        scrollView.maximumZoomScale = 2.0
+        return scrollView
+    }
     
     @IBAction func deactivateResultButton(sender: AnyObject)
     {
+        if nameOfAddress.editing == true
+        {
+            nameOfAddress.textColor = UIColor.blackColor()
+        }
         self.resultButton.enabled = true
         self.resultButton.setTitle("Kontinye", forState: UIControlState.Normal)
     }
@@ -115,11 +128,11 @@ class AddressCaptureViewController: UIViewController, UIPickerViewDelegate {
     
     func checkForEmptyInputs() -> (Bool)
     {
-        
+      
         let address = addressOfLocation.text!
         let userCity = city.text!
         let state  = stateAdr
-        
+       
         if address.isEmpty || userCity.isEmpty || state.isEmpty || state == "Chwazi Eta ☟"
         {
             return true
@@ -127,7 +140,7 @@ class AddressCaptureViewController: UIViewController, UIPickerViewDelegate {
         }else
         {
             return false
-        }
+        }        
     }
     
     
@@ -139,11 +152,11 @@ class AddressCaptureViewController: UIViewController, UIPickerViewDelegate {
         let userCity = city.text!
         let state  = stateAdr
         let name: String = nameOfAddress.text!
-        let tempStorage =  tempDB.displayAllFromDatabase().name.filter({$0 == name})
+         let tempStorage =  tempDB.displayAllFromDatabase().name.filter({$0 == name})
         if  checkForEmptyInputs() == true{
             msgVar = MessageType.EmptyUserInput
             alertMessageHandler(msgVar, bundler: ["Plas Vid"," Ken ou bliye ranpli yon pati",repeatedWords.okBtn,"", repeatedWords.poko], twoBtns: false)
-            
+        
         }else if !tempStorage.isEmpty
         {
             msgVar = MessageType.DuplicateDBEntry(name)
@@ -237,7 +250,7 @@ class AddressCaptureViewController: UIViewController, UIPickerViewDelegate {
     
     func alertMessageHandler( errType: MessageType, bundler:[String], twoBtns:Bool)
     {
-        
+       
         let alertController = UIAlertController(title: bundler[0], message: bundler[1], preferredStyle: .Alert)
         let OKAction = UIAlertAction(title: bundler[2], style: .Default) { (action) in
             
@@ -249,9 +262,9 @@ class AddressCaptureViewController: UIViewController, UIPickerViewDelegate {
                 self.resultButton.setTitle(bundler[4], forState: UIControlState.Normal)
                 
             case .DuplicateDBEntry(let recordName):
+                    self.tempDB.updateEntriesToDb(recordName, comment: self.comment.text!, rendezvous: self.haveRendezVous, recordName: recordName)
                 alertController.dismissViewControllerAnimated(true, completion: nil)
                 self.resultButton.setTitle(bundler[4], forState: UIControlState.Normal)
-                self.tempDB.updateEntriesToDb(recordName, comment: self.comment.text!, rendezvous: self.haveRendezVous, recordName: recordName)
             case .AddressVerification(let lat , let lng):
                 alertController.dismissViewControllerAnimated(true, completion: nil)
                 self.resultButton.setTitle(bundler[4], forState: UIControlState.Normal)
@@ -260,7 +273,7 @@ class AddressCaptureViewController: UIViewController, UIPickerViewDelegate {
                 alertController.dismissViewControllerAnimated(true, completion: nil)
                 self.resultButton.setTitle(bundler[4], forState: UIControlState.Normal)
             default:
-                alertController.dismissViewControllerAnimated(true, completion: nil)
+               alertController.dismissViewControllerAnimated(true, completion: nil)
             }
         }//end of OKbtn
         
@@ -268,35 +281,36 @@ class AddressCaptureViewController: UIViewController, UIPickerViewDelegate {
             switch errType
             {
             case .DuplicateDBEntry( _):
-                alertController.dismissViewControllerAnimated(true, completion: nil)
+                 alertController.dismissViewControllerAnimated(true, completion: nil)
+                 self.nameOfAddress.becomeFirstResponder()
+                 self.nameOfAddress.textColor = UIColor.colorWithAlphaComponent(UIColor.redColor())(0.7)
                 self.resultButton.setTitle(bundler[5], forState: UIControlState.Normal)
             case .AddressVerification( _ , _):
                 alertController.dismissViewControllerAnimated(true, completion: nil)
                 self.resultButton.setTitle(bundler[5], forState: UIControlState.Normal)
             default:
-                alertController.dismissViewControllerAnimated(true, completion: nil)
+                
+              alertController.dismissViewControllerAnimated(true, completion: nil)
             }
         }//end of cancel btn
         
-        if twoBtns == true
+    if twoBtns == true
         {
-            alertController.addAction(OKAction)
             alertController.addAction(cancelAction)
-            self.presentViewController(alertController, animated: true, completion: nil)
-        }else
-        {
-            alertController.addAction(OKAction)
-            self.presentViewController(alertController, animated: true, completion: nil)
+            
         }
+                alertController.addAction(OKAction)
+                self.presentViewController(alertController, animated: true, completion: nil)
+            
         
     }//end of alertMessageHandler( errType: MessageType, bundler:[String], twoBtns:Bool)
     
-    
+       
     override func viewWillDisappear(animated: Bool) {
         tempDB = nil
         appCheck = AppProgressionChecks.stopView
         initializeGlobals(appCheck)
-        
+
         print(" Address viewWillDisappear evoked!")
     }
     
@@ -308,7 +322,7 @@ class AddressCaptureViewController: UIViewController, UIPickerViewDelegate {
         initializeGlobals(appCheck)
         print("did receive memory warning evoke!")
     }
-    
+
     
     
     

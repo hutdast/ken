@@ -14,19 +14,16 @@
                         <viewControllerLayoutGuide type="bottom" id="5nb-w1-5gy"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="znT-Qg-TiO">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" alpha="0.40000000000000002" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bPW-94-YTC">
-                                <rect key="frame" x="20" y="138" width="560" height="30"/>
+                                <rect key="frame" x="16" y="138" width="343" height="30"/>
                                 <color key="backgroundColor" red="0.0" green="0.50196081399917603" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <state key="normal" title="Gade yon adrès ki nan dosye ou"/>
-                                <connections>
-                                    <segue destination="cEH-rc-d7k" kind="showDetail" identifier="showExample" id="V21-QC-dZa"/>
-                                </connections>
                             </button>
                             <button opaque="NO" alpha="0.40000000000000002" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ACd-AZ-uWG">
-                                <rect key="frame" x="20" y="189" width="560" height="30"/>
+                                <rect key="frame" x="16" y="189" width="343" height="30"/>
                                 <color key="backgroundColor" red="0.0" green="0.50196081399917603" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <state key="normal" title="Sere yon adrès nan dosye ou"/>
                                 <connections>
@@ -34,7 +31,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" alpha="0.40000000000000002" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jRf-3G-9wD">
-                                <rect key="frame" x="20" y="88" width="560" height="30"/>
+                                <rect key="frame" x="16" y="88" width="343" height="30"/>
                                 <color key="backgroundColor" red="0.0" green="0.50196081399917603" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <state key="normal" title="Gade tout kote ou anrijistre"/>
                                 <connections>
@@ -59,45 +56,47 @@
                     <navigationItem key="navigationItem" title="Bòn Fèt Ken" id="lve-99-pws">
                         <barButtonItem key="backBarButtonItem" title="Retounen" id="7Xh-DF-GZP"/>
                     </navigationItem>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Myq-Cv-0pR" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="882" y="-246"/>
         </scene>
-        <!--View Controller-->
-        <scene sceneID="090-pe-Eyk">
-            <objects>
-                <viewController id="cEH-rc-d7k" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="akt-ng-j8O"/>
-                        <viewControllerLayoutGuide type="bottom" id="4oh-kP-AHg"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="qWA-96-kUN">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="R0Y-fe-fFO" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1645.5" y="-246"/>
-        </scene>
         <!--Tout Kote ou pase-->
         <scene sceneID="5u8-OY-BOb">
             <objects>
                 <tableViewController clearsSelectionOnViewWillAppear="NO" id="3Wn-cb-xpw" customClass="ChoicesTableViewController" customModule="KenelLaraque" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="y5R-2W-UyB">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" keyboardDismissMode="onDrag" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="58" sectionHeaderHeight="28" sectionFooterHeight="28" id="y5R-2W-UyB">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="uiCell" id="izf-V9-kH8">
-                                <rect key="frame" x="0.0" y="28" width="600" height="44"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="uiCell" textLabel="tbD-L7-3kO" detailTextLabel="KQT-9p-WhG" rowHeight="58" style="IBUITableViewCellStyleSubtitle" id="izf-V9-kH8">
+                                <rect key="frame" x="0.0" y="28" width="375" height="58"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="izf-V9-kH8" id="DLS-f6-fIn">
-                                    <rect key="frame" x="0.0" y="0.0" width="600" height="43"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="57"/>
                                     <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="tbD-L7-3kO">
+                                            <rect key="frame" x="15" y="12" width="32" height="20"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Subtitle" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="KQT-9p-WhG">
+                                            <rect key="frame" x="15" y="32" width="41" height="14"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <segue destination="Tsr-6r-VpV" kind="show" identifier="showMap" id="fQ2-Ak-khs"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -106,10 +105,56 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Tout Kote ou pase" id="D6n-JG-m2I"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eEp-g0-XH4" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="664.5" y="550.5"/>
+            <point key="canvasLocation" x="338.5" y="630.5"/>
+        </scene>
+        <!--Map View Controller-->
+        <scene sceneID="452-CZ-Rrs">
+            <objects>
+                <viewController id="Tsr-6r-VpV" customClass="MapViewController" customModule="KenelLaraque" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="RKS-Zt-dNg"/>
+                        <viewControllerLayoutGuide type="bottom" id="gzt-5K-cSB"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="ERK-BT-jml">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="eGc-Ja-QIu">
+                                <rect key="frame" x="28" y="211" width="334" height="431"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="431" id="oGo-93-nBA"/>
+                                </constraints>
+                            </mapView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6xL-tv-HAF">
+                                <rect key="frame" x="17" y="48" width="345" height="94"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="6xL-tv-HAF" firstAttribute="width" secondItem="ERK-BT-jml" secondAttribute="width" id="JEw-l7-lOl"/>
+                            <constraint firstItem="gzt-5K-cSB" firstAttribute="top" secondItem="eGc-Ja-QIu" secondAttribute="bottom" constant="25" id="Ojy-OL-Mi1"/>
+                            <constraint firstItem="eGc-Ja-QIu" firstAttribute="width" secondItem="ERK-BT-jml" secondAttribute="width" id="RyL-yh-vuJ"/>
+                            <constraint firstItem="eGc-Ja-QIu" firstAttribute="top" secondItem="6xL-tv-HAF" secondAttribute="bottom" constant="69" id="dwA-Me-Yof"/>
+                            <constraint firstItem="6xL-tv-HAF" firstAttribute="centerX" secondItem="ERK-BT-jml" secondAttribute="centerX" id="ja4-eM-wxd"/>
+                            <constraint firstItem="eGc-Ja-QIu" firstAttribute="centerX" secondItem="ERK-BT-jml" secondAttribute="centerX" id="wgu-Uf-MTq"/>
+                        </constraints>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="kenMap" destination="eGc-Ja-QIu" id="cbc-25-8Vg"/>
+                        <outlet property="resultHeader" destination="6xL-tv-HAF" id="NWp-4K-55y"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="AZa-RM-BZ0" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="882.5" y="630.5"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="zuj-Fg-XG4">
@@ -147,12 +192,12 @@
                         <viewControllerLayoutGuide type="top" id="OTU-aW-2zg"/>
                         <viewControllerLayoutGuide type="bottom" id="xqz-0b-ThJ"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" layoutMarginsFollowReadableWidth="YES" id="xWZ-IK-8iS">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                    <view key="view" contentMode="scaleToFill" layoutMarginsFollowReadableWidth="YES" id="xWZ-IK-8iS" customClass="UIScrollView">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" alpha="0.40000000000000002" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Antre enfòmasyon wap anrijistre a" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1wG-cw-x6Y">
-                                <rect key="frame" x="20" y="77" width="560" height="42"/>
+                                <rect key="frame" x="20" y="28" width="560" height="42"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.40000000600000002" green="1" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
@@ -176,7 +221,7 @@
                                 </variation>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" alpha="0.40000000000000002" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Non kote a:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LNu-yb-x0Q">
-                                <rect key="frame" x="20" y="145" width="94" height="31"/>
+                                <rect key="frame" x="20" y="65" width="94" height="31"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.40000000600000002" green="1" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
@@ -193,15 +238,15 @@
                                     <rect key="frame" x="20" y="119" width="99" height="27"/>
                                 </variation>
                                 <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="20" y="172" width="94" height="35"/>
+                                    <rect key="frame" x="20" y="180" width="94" height="35"/>
                                 </variation>
                                 <variation key="heightClass=regular-widthClass=regular" fixedFrame="YES">
                                     <rect key="frame" x="20" y="145" width="89" height="32"/>
                                 </variation>
                             </label>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="z9c-yo-eFX">
-                                <rect key="frame" x="141" y="185" width="400" height="30"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="12" translatesAutoresizingMaskIntoConstraints="NO" id="z9c-yo-eFX">
+                                <rect key="frame" x="141" y="105" width="159" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <textInputTraits key="textInputTraits"/>
                                 <variation key="heightClass=compact" fixedFrame="YES">
                                     <rect key="frame" x="331" y="93" width="198" height="30"/>
@@ -221,10 +266,13 @@
                                 <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
                                     <rect key="frame" x="141" y="215" width="225" height="30"/>
                                 </variation>
+                                <connections>
+                                    <action selector="deactivateResultButton:" destination="fUG-E1-oDI" eventType="editingDidBegin" id="5ML-Fc-DdE"/>
+                                </connections>
                             </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="CrG-AM-fc1">
-                                <rect key="frame" x="141" y="146" width="400" height="30"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Nimpòt non ou vle" textAlignment="natural" minimumFontSize="12" translatesAutoresizingMaskIntoConstraints="NO" id="CrG-AM-fc1">
+                                <rect key="frame" x="141" y="66" width="159" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <textInputTraits key="textInputTraits"/>
                                 <variation key="heightClass=compact" fixedFrame="YES">
                                     <rect key="frame" x="129" y="93" width="76" height="30"/>
@@ -239,11 +287,14 @@
                                     <rect key="frame" x="147" y="116" width="407" height="30"/>
                                 </variation>
                                 <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="141" y="169" width="225" height="30"/>
+                                    <rect key="frame" x="141" y="177" width="225" height="30"/>
                                 </variation>
+                                <connections>
+                                    <action selector="deactivateResultButton:" destination="fUG-E1-oDI" eventType="editingDidBegin" id="PC9-yR-rny"/>
+                                </connections>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" alpha="0.40000000000000002" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Adrès kote a:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OjA-hD-bc0">
-                                <rect key="frame" x="20" y="184" width="104" height="31"/>
+                                <rect key="frame" x="20" y="104" width="104" height="31"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.40000000600000002" green="1" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
@@ -269,8 +320,8 @@
                                     <rect key="frame" x="20" y="186" width="107" height="29"/>
                                 </variation>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" alpha="0.40000000596046448" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Site:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1aH-YB-u3p">
-                                <rect key="frame" x="20" y="226" width="104" height="31"/>
+                            <label opaque="NO" userInteractionEnabled="NO" alpha="0.40000000596046448" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Vil:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1aH-YB-u3p">
+                                <rect key="frame" x="20" y="146" width="104" height="31"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.40000000600000002" green="1" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
@@ -296,9 +347,9 @@
                                     <rect key="frame" x="20" y="221" width="107" height="29"/>
                                 </variation>
                             </label>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hOI-de-mcX">
-                                <rect key="frame" x="141" y="223" width="112" height="30"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="12" translatesAutoresizingMaskIntoConstraints="NO" id="hOI-de-mcX">
+                                <rect key="frame" x="141" y="143" width="159" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <textInputTraits key="textInputTraits"/>
                                 <variation key="heightClass=compact" fixedFrame="YES">
                                     <rect key="frame" x="129" y="133" width="111" height="30"/>
@@ -318,42 +369,13 @@
                                 <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
                                     <rect key="frame" x="141" y="253" width="225" height="30"/>
                                 </variation>
-                            </textField>
-                            <button opaque="NO" alpha="0.40000000000000002" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="P9K-HN-BBA">
-                                <rect key="frame" x="406" y="357" width="135" height="30"/>
-                                <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <state key="normal" title="Kontinye"/>
-                                <variation key="heightClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="394" y="242" width="135" height="30"/>
-                                </variation>
-                                <variation key="heightClass=regular" fixedFrame="YES">
-                                    <rect key="frame" x="406" y="360" width="135" height="30"/>
-                                </variation>
-                                <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="138" y="410" width="235" height="30"/>
-                                </variation>
-                                <variation key="widthClass=regular" fixedFrame="YES">
-                                    <rect key="frame" x="400" y="384" width="135" height="30"/>
-                                </variation>
-                                <variation key="heightClass=compact-widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="32" y="293" width="108" height="30"/>
-                                </variation>
-                                <variation key="heightClass=compact-widthClass=regular" fixedFrame="YES">
-                                    <rect key="frame" x="373" y="319" width="181" height="30"/>
-                                </variation>
-                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="203" y="442" width="101" height="31"/>
-                                </variation>
-                                <variation key="heightClass=regular-widthClass=regular" fixedFrame="YES">
-                                    <rect key="frame" x="406" y="437" width="135" height="30"/>
-                                </variation>
                                 <connections>
-                                    <action selector="sendResult:" destination="fUG-E1-oDI" eventType="touchUpInside" id="DSM-6L-Tqj"/>
+                                    <action selector="deactivateResultButton:" destination="fUG-E1-oDI" eventType="editingDidBegin" id="Gik-lt-gBd"/>
                                 </connections>
-                            </button>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="zc4-l9-Po5">
-                                <rect key="frame" x="141" y="315" width="400" height="30"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Fè yon remak sou plas sa" textAlignment="natural" minimumFontSize="12" translatesAutoresizingMaskIntoConstraints="NO" id="zc4-l9-Po5">
+                                <rect key="frame" x="141" y="260" width="159" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <textInputTraits key="textInputTraits"/>
                                 <variation key="heightClass=compact" fixedFrame="YES">
                                     <rect key="frame" x="129" y="204" width="400" height="30"/>
@@ -380,11 +402,11 @@
                                     <rect key="frame" x="141" y="396" width="400" height="30"/>
                                 </variation>
                                 <connections>
-                                    <action selector="checkUserInputs:" destination="fUG-E1-oDI" eventType="editingDidEnd" id="Xz1-oZ-rRr"/>
+                                    <action selector="deactivateResultButton:" destination="fUG-E1-oDI" eventType="editingDidBegin" id="1Ut-XA-bj2"/>
                                 </connections>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" alpha="0.40000000000000002" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Kòmantè:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RQN-GA-mYu">
-                                <rect key="frame" x="20" y="318" width="104" height="31"/>
+                                <rect key="frame" x="20" y="263" width="104" height="31"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.40000000600000002" green="1" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
@@ -414,7 +436,7 @@
                                 </variation>
                             </label>
                             <pickerView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="qzi-QJ-9BO">
-                                <rect key="frame" x="332" y="226" width="209" height="52"/>
+                                <rect key="frame" x="141" y="187" width="159" height="29"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <color key="tintColor" red="0.40000000600000002" green="1" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
                                 <variation key="heightClass=compact" fixedFrame="YES">
@@ -443,7 +465,7 @@
                                 </variation>
                             </pickerView>
                             <label opaque="NO" userInteractionEnabled="NO" alpha="0.40000000596046448" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Eta:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GT2-Dw-wR7">
-                                <rect key="frame" x="275" y="226" width="41" height="31"/>
+                                <rect key="frame" x="20" y="185" width="41" height="31"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.40000000600000002" green="1" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
@@ -469,35 +491,8 @@
                                     <rect key="frame" x="20" y="259" width="107" height="29"/>
                                 </variation>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" alpha="0.40000000000000002" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Rezilta" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="v1b-HL-ITV">
-                                <rect key="frame" x="141" y="413" width="400" height="113"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="0.40000000600000002" green="1" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                                <variation key="heightClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="129" y="289" width="400" height="76"/>
-                                </variation>
-                                <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="138" y="476" width="235" height="104"/>
-                                </variation>
-                                <variation key="widthClass=regular" fixedFrame="YES">
-                                    <rect key="frame" x="100" y="455" width="400" height="104"/>
-                                </variation>
-                                <variation key="heightClass=compact-widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="184" y="278" width="196" height="67"/>
-                                </variation>
-                                <variation key="heightClass=compact-widthClass=regular" fixedFrame="YES">
-                                    <rect key="frame" x="575" y="119" width="187" height="208"/>
-                                </variation>
-                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="20" y="580" width="346" height="200"/>
-                                </variation>
-                                <variation key="heightClass=regular-widthClass=regular" fixedFrame="YES">
-                                    <rect key="frame" x="141" y="520" width="400" height="104"/>
-                                </variation>
-                            </label>
                             <label opaque="NO" userInteractionEnabled="NO" alpha="0.40000000596046448" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Randevou la:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ddo-63-ujC">
-                                <rect key="frame" x="20" y="273" width="104" height="31"/>
+                                <rect key="frame" x="20" y="227" width="104" height="31"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.40000000600000002" green="1" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
@@ -524,7 +519,7 @@
                                 </variation>
                             </label>
                             <segmentedControl opaque="NO" alpha="0.40000000000000002" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="45O-Tk-B36">
-                                <rect key="frame" x="141" y="270" width="121" height="29"/>
+                                <rect key="frame" x="141" y="224" width="121" height="29"/>
                                 <segments>
                                     <segment title="WI"/>
                                     <segment title="NON"/>
@@ -551,9 +546,97 @@
                                     <rect key="frame" x="141" y="359" width="121" height="29"/>
                                 </variation>
                                 <connections>
-                                    <action selector="getselectedValueOfRendezvous:" destination="fUG-E1-oDI" eventType="valueChanged" id="Xp9-fR-flE"/>
+                                    <action selector="deactivateResultButton:" destination="fUG-E1-oDI" eventType="valueChanged" id="xru-74-AmI"/>
+                                    <action selector="getselectedValueOfRendezvous:" destination="fUG-E1-oDI" eventType="valueChanged" id="Eig-8d-RMq"/>
                                 </connections>
                             </segmentedControl>
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" hidesWhenStopped="YES" style="white" translatesAutoresizingMaskIntoConstraints="NO" id="QrN-eu-cGQ">
+                                <rect key="frame" x="104" y="303" width="20" height="20"/>
+                                <color key="color" red="0.40000000600000002" green="1" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <variation key="heightClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="347" y="252" width="20" height="20"/>
+                                </variation>
+                                <variation key="heightClass=regular" fixedFrame="YES">
+                                    <rect key="frame" x="356" y="370" width="20" height="20"/>
+                                </variation>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="103" y="420" width="20" height="20"/>
+                                </variation>
+                                <variation key="widthClass=regular" fixedFrame="YES">
+                                    <rect key="frame" x="358" y="394" width="20" height="20"/>
+                                </variation>
+                                <variation key="heightClass=compact-widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="148" y="303" width="20" height="20"/>
+                                </variation>
+                                <variation key="heightClass=compact-widthClass=regular" fixedFrame="YES">
+                                    <rect key="frame" x="313" y="329" width="20" height="20"/>
+                                </variation>
+                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="141" y="453" width="20" height="20"/>
+                                </variation>
+                                <variation key="heightClass=regular-widthClass=regular" fixedFrame="YES">
+                                    <rect key="frame" x="357" y="442" width="20" height="20"/>
+                                </variation>
+                            </activityIndicatorView>
+                            <button opaque="NO" alpha="0.40000000000000002" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="P9K-HN-BBA">
+                                <rect key="frame" x="165" y="298" width="135" height="30"/>
+                                <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <variation key="heightClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="394" y="242" width="135" height="30"/>
+                                </variation>
+                                <variation key="heightClass=regular" fixedFrame="YES">
+                                    <rect key="frame" x="406" y="360" width="135" height="30"/>
+                                </variation>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="138" y="410" width="235" height="30"/>
+                                </variation>
+                                <variation key="widthClass=regular" fixedFrame="YES">
+                                    <rect key="frame" x="400" y="384" width="135" height="30"/>
+                                </variation>
+                                <variation key="heightClass=compact-widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="32" y="293" width="108" height="30"/>
+                                </variation>
+                                <variation key="heightClass=compact-widthClass=regular" fixedFrame="YES">
+                                    <rect key="frame" x="373" y="319" width="181" height="30"/>
+                                </variation>
+                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="203" y="442" width="163" height="31"/>
+                                </variation>
+                                <variation key="heightClass=regular-widthClass=regular" fixedFrame="YES">
+                                    <rect key="frame" x="406" y="437" width="135" height="30"/>
+                                </variation>
+                                <connections>
+                                    <action selector="saveUserInput:" destination="fUG-E1-oDI" eventType="touchUpInside" id="EBV-Gg-iHR"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" alpha="0.40000000000000002" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" lineBreakMode="tailTruncation" numberOfLines="6" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="v1b-HL-ITV">
+                                <rect key="frame" x="20" y="348" width="280" height="58"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.40000000600000002" green="1" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="heightClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="129" y="289" width="400" height="76"/>
+                                </variation>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="138" y="448" width="235" height="104"/>
+                                </variation>
+                                <variation key="widthClass=regular" fixedFrame="YES">
+                                    <rect key="frame" x="100" y="455" width="400" height="104"/>
+                                </variation>
+                                <variation key="heightClass=compact-widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="184" y="278" width="196" height="67"/>
+                                </variation>
+                                <variation key="heightClass=compact-widthClass=regular" fixedFrame="YES">
+                                    <rect key="frame" x="575" y="119" width="187" height="208"/>
+                                </variation>
+                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="20" y="481" width="346" height="172"/>
+                                </variation>
+                                <variation key="heightClass=regular-widthClass=regular" fixedFrame="YES">
+                                    <rect key="frame" x="141" y="520" width="400" height="104"/>
+                                </variation>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="0.20000000300000001" green="0.20000000300000001" blue="0.20000000300000001" alpha="1" colorSpace="calibratedRGB"/>
                         <color key="tintColor" red="0.40000000600000002" green="1" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
@@ -571,9 +654,10 @@
                                 <include reference="OjA-hD-bc0"/>
                                 <include reference="1aH-YB-u3p"/>
                                 <include reference="hOI-de-mcX"/>
-                                <include reference="P9K-HN-BBA"/>
                                 <include reference="qzi-QJ-9BO"/>
                                 <include reference="GT2-Dw-wR7"/>
+                                <include reference="QrN-eu-cGQ"/>
+                                <include reference="P9K-HN-BBA"/>
                                 <include reference="v1b-HL-ITV"/>
                             </mask>
                         </variation>
@@ -586,6 +670,7 @@
                         </variation>
                     </view>
                     <navigationItem key="navigationItem" title="Anrijistre enfòmasyon " id="haH-1N-NW5"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
                         <outlet property="addressOfLocation" destination="z9c-yo-eFX" id="97h-xB-lu8"/>
                         <outlet property="city" destination="hOI-de-mcX" id="cpI-fb-vaG"/>
@@ -594,12 +679,14 @@
                         <outlet property="rendezVous" destination="45O-Tk-B36" id="7Vk-cd-1zz"/>
                         <outlet property="result" destination="v1b-HL-ITV" id="bWX-HK-Duo"/>
                         <outlet property="resultButton" destination="P9K-HN-BBA" id="ull-B0-8TT"/>
+                        <outlet property="savingActivity" destination="QrN-eu-cGQ" id="4hj-dn-izO"/>
+                        <outlet property="scrollingView" destination="xWZ-IK-8iS" id="Taz-Up-rFS"/>
                         <outlet property="statePicker" destination="qzi-QJ-9BO" id="G4b-I4-zgS"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2ii-Tw-cKu" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1350" y="549"/>
+            <point key="canvasLocation" x="1669.5" y="558.5"/>
         </scene>
     </scenes>
 </document>
