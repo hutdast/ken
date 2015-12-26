@@ -8,6 +8,7 @@
 
 import UIKit
 import SwiftyJSON
+import CoreLocation
 class AddressCaptureViewController: UIViewController, UIPickerViewDelegate, UIScrollViewDelegate {
     
     enum MessageType
@@ -49,15 +50,42 @@ class AddressCaptureViewController: UIViewController, UIPickerViewDelegate, UISc
     var stateAdr: String!
     var msgVar: MessageType!
     var appCheck: AppProgressionChecks!
-    
+    var nameFromTableView: String!
     
     override func viewDidLoad()
     {
         super.viewDidLoad()
          appCheck = AppProgressionChecks.startView
         initializeGlobals(appCheck)
-       
-       
+    }
+    
+    override func viewWillAppear(animated: Bool) {
+        //if nameFromtableView is not nil then it is from table view else it is from somewhere else
+        if nameFromTableView != nil
+        {
+            
+            let geoCoder = CLGeocoder()
+            let indeX = tempDB.displayAllFromDatabase().name.indexOf(nameFromTableView)
+            nameOfAddress.text = nameFromTableView
+            comment.text = tempDB.displayAllFromDatabase().comment[indeX!]
+            let lat = tempDB.displayAllFromDatabase().latitude[indeX!]
+            let lng = tempDB.displayAllFromDatabase().longitude[indeX!]
+            let location = CLLocation(latitude: lat, longitude: lng)
+            geoCoder.reverseGeocodeLocation(location, completionHandler:
+                { (data, error) in
+                let placeMarks = data! as [CLPlacemark]
+                let loc: CLPlacemark = placeMarks[0]
+                    self.city.text = loc.locality
+                    self.addressOfLocation.text = loc.name
+            })
+            if tempDB.displayAllFromDatabase().rendezvous[indeX!] == false
+            {
+                rendezVous.selectedSegmentIndex = 1
+            }
+            
+        }
+        
+        
     }
     
     func initializeGlobals(app:AppProgressionChecks){
@@ -88,11 +116,31 @@ class AddressCaptureViewController: UIViewController, UIPickerViewDelegate, UISc
              msgVar = nil
              appCheck = nil
         default:
-            print("nothing to add")
-         
+            self.statePicker.delegate = nil
+            haveRendezVous = nil
+            stateAdr = nil
+            msgVar = nil
+            appCheck = nil
         }
        
     }//end of initializeGlobals()
+    
+    
+    
+    @IBAction func takeInfoFromMap(segue: UIStoryboardSegue)
+    {
+        if let mapVC = segue.sourceViewController as? MapViewController
+        {
+            let theIndex = tempDB.displayAllFromDatabase().name.indexOf(mapVC.name)
+           comment.text = tempDB.displayAllFromDatabase().comment[theIndex!]
+           nameOfAddress.text = tempDB.displayAllFromDatabase().name[theIndex!]
+           // addressOfLocation.text =
+            
+        }
+        
+    }
+    
+    
     
     func viewForZoomingInScrollView(scrollView: UIScrollView) -> UIView? {
         scrollView.minimumZoomScale = 0.5
@@ -203,8 +251,9 @@ class AddressCaptureViewController: UIViewController, UIPickerViewDelegate, UISc
         var lat = Double()
         var lng  = Double()
         let priority = QOS_CLASS_USER_INTERACTIVE
+         self.savingActivity.startAnimating()
         dispatch_async(dispatch_get_global_queue(priority, 0)) {
-            self.savingActivity.startAnimating()
+           
             let task = apiSession.dataTaskWithRequest(urlRequest,completionHandler: { (data, response, error) in
                 if(error != nil){ print("there is an error")}
                 guard let responseData = data else {  return}
@@ -307,7 +356,7 @@ class AddressCaptureViewController: UIViewController, UIPickerViewDelegate, UISc
     
        
     override func viewWillDisappear(animated: Bool) {
-        tempDB = nil
+       
         appCheck = AppProgressionChecks.stopView
         initializeGlobals(appCheck)
 
@@ -317,10 +366,7 @@ class AddressCaptureViewController: UIViewController, UIPickerViewDelegate, UISc
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
-        tempDB = nil
-        appCheck = AppProgressionChecks.stopView
-        initializeGlobals(appCheck)
-        print("did receive memory warning evoke!")
+    
     }
 
     

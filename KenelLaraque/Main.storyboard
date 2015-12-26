@@ -17,11 +17,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" alpha="0.40000000000000002" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bPW-94-YTC">
-                                <rect key="frame" x="16" y="138" width="343" height="30"/>
-                                <color key="backgroundColor" red="0.0" green="0.50196081399917603" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <state key="normal" title="Gade yon adrès ki nan dosye ou"/>
-                            </button>
                             <button opaque="NO" alpha="0.40000000000000002" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ACd-AZ-uWG">
                                 <rect key="frame" x="16" y="189" width="343" height="30"/>
                                 <color key="backgroundColor" red="0.0" green="0.50196081399917603" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -42,15 +37,13 @@
                         <color key="backgroundColor" red="0.20000000300000001" green="0.20000000300000001" blue="0.20000000300000001" alpha="1" colorSpace="calibratedRGB"/>
                         <color key="tintColor" red="0.40000000596046448" green="1" blue="0.40000000596046448" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstItem="bPW-94-YTC" firstAttribute="leading" secondItem="jRf-3G-9wD" secondAttribute="leading" id="NB1-6E-2Rb"/>
+                            <constraint firstItem="ACd-AZ-uWG" firstAttribute="leading" secondItem="jRf-3G-9wD" secondAttribute="leading" id="4qg-47-DuP"/>
+                            <constraint firstItem="ACd-AZ-uWG" firstAttribute="trailing" secondItem="znT-Qg-TiO" secondAttribute="trailingMargin" id="5Pf-E9-eha"/>
+                            <constraint firstItem="ACd-AZ-uWG" firstAttribute="trailing" secondItem="jRf-3G-9wD" secondAttribute="trailing" id="9nW-oy-dJF"/>
+                            <constraint firstItem="5nb-w1-5gy" firstAttribute="top" secondItem="ACd-AZ-uWG" secondAttribute="bottom" constant="448" id="Cmk-I6-GPT"/>
                             <constraint firstItem="jRf-3G-9wD" firstAttribute="leading" secondItem="znT-Qg-TiO" secondAttribute="leadingMargin" id="WgD-6R-IAO"/>
-                            <constraint firstItem="ACd-AZ-uWG" firstAttribute="top" secondItem="bPW-94-YTC" secondAttribute="bottom" constant="21" id="X8R-mh-56q"/>
-                            <constraint firstItem="bPW-94-YTC" firstAttribute="top" secondItem="jRf-3G-9wD" secondAttribute="bottom" constant="20" id="iKZ-Dn-IKm"/>
+                            <constraint firstItem="ACd-AZ-uWG" firstAttribute="top" secondItem="jRf-3G-9wD" secondAttribute="bottom" constant="71" id="cdD-2k-byH"/>
                             <constraint firstItem="jRf-3G-9wD" firstAttribute="top" secondItem="PQG-Nn-e5Z" secondAttribute="bottom" constant="24" id="kfo-4q-yR1"/>
-                            <constraint firstItem="ACd-AZ-uWG" firstAttribute="trailing" secondItem="bPW-94-YTC" secondAttribute="trailing" id="oWl-2W-8oh"/>
-                            <constraint firstItem="bPW-94-YTC" firstAttribute="leading" secondItem="ACd-AZ-uWG" secondAttribute="leading" id="q3p-Bx-IdV"/>
-                            <constraint firstItem="bPW-94-YTC" firstAttribute="trailing" secondItem="jRf-3G-9wD" secondAttribute="trailing" id="qgd-La-9Aa"/>
-                            <constraint firstItem="bPW-94-YTC" firstAttribute="trailing" secondItem="znT-Qg-TiO" secondAttribute="trailingMargin" id="tbh-uc-EZC"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Bòn Fèt Ken" id="lve-99-pws">
@@ -71,11 +64,11 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="uiCell" textLabel="tbD-L7-3kO" detailTextLabel="KQT-9p-WhG" rowHeight="58" style="IBUITableViewCellStyleSubtitle" id="izf-V9-kH8">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="uiCell" textLabel="tbD-L7-3kO" detailTextLabel="KQT-9p-WhG" rowHeight="58" style="IBUITableViewCellStyleSubtitle" id="izf-V9-kH8">
                                 <rect key="frame" x="0.0" y="28" width="375" height="58"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="izf-V9-kH8" id="DLS-f6-fIn">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="57"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="342" height="57"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="tbD-L7-3kO">
@@ -106,10 +99,13 @@
                     </tableView>
                     <navigationItem key="navigationItem" title="Tout Kote ou pase" id="D6n-JG-m2I"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <segue destination="fUG-E1-oDI" kind="show" identifier="showForm" id="twM-GG-cSY"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eEp-g0-XH4" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="338.5" y="630.5"/>
+            <point key="canvasLocation" x="447.5" y="679.5"/>
         </scene>
         <!--Map View Controller-->
         <scene sceneID="452-CZ-Rrs">
@@ -123,38 +119,66 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="eGc-Ja-QIu">
-                                <rect key="frame" x="28" y="211" width="334" height="431"/>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="eGc-Ja-QIu">
+                                <rect key="frame" x="0.0" y="209" width="375" height="433"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="431" id="oGo-93-nBA"/>
                                 </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="oGo-93-nBA"/>
+                                    </mask>
+                                </variation>
                             </mapView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6xL-tv-HAF">
-                                <rect key="frame" x="17" y="48" width="345" height="94"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="characterWrap" translatesAutoresizingMaskIntoConstraints="NO" id="dKf-Ze-mqX">
+                                <rect key="frame" x="278" y="42" width="85" height="30"/>
+                                <state key="normal" title="Kòmansman"/>
+                                <connections>
+                                    <segue destination="ldx-OC-Vsg" kind="unwind" identifier="showWelcome" unwindAction="redirectToWelcome:" id="I8m-0J-x8J"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="characterWrap" translatesAutoresizingMaskIntoConstraints="NO" id="OoY-Id-keP">
+                                <rect key="frame" x="6" y="42" width="93" height="30"/>
+                                <state key="normal" title=""/>
+                                <connections>
+                                    <segue destination="ldx-OC-Vsg" kind="unwind" identifier="showMapInfo" unwindAction="takeInfoFromMap:" id="Ypg-P5-uSt"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="6xL-tv-HAF" firstAttribute="width" secondItem="ERK-BT-jml" secondAttribute="width" id="JEw-l7-lOl"/>
+                            <constraint firstItem="OoY-Id-keP" firstAttribute="leading" secondItem="ERK-BT-jml" secondAttribute="leadingMargin" constant="-10" id="48J-Ep-T2p"/>
+                            <constraint firstItem="dKf-Ze-mqX" firstAttribute="leading" secondItem="OoY-Id-keP" secondAttribute="trailing" constant="179" id="AaT-I1-KVg"/>
+                            <constraint firstItem="eGc-Ja-QIu" firstAttribute="top" secondItem="dKf-Ze-mqX" secondAttribute="bottom" constant="137" id="HyE-Ui-Ya2"/>
                             <constraint firstItem="gzt-5K-cSB" firstAttribute="top" secondItem="eGc-Ja-QIu" secondAttribute="bottom" constant="25" id="Ojy-OL-Mi1"/>
                             <constraint firstItem="eGc-Ja-QIu" firstAttribute="width" secondItem="ERK-BT-jml" secondAttribute="width" id="RyL-yh-vuJ"/>
-                            <constraint firstItem="eGc-Ja-QIu" firstAttribute="top" secondItem="6xL-tv-HAF" secondAttribute="bottom" constant="69" id="dwA-Me-Yof"/>
-                            <constraint firstItem="6xL-tv-HAF" firstAttribute="centerX" secondItem="ERK-BT-jml" secondAttribute="centerX" id="ja4-eM-wxd"/>
+                            <constraint firstItem="eGc-Ja-QIu" firstAttribute="top" secondItem="dKf-Ze-mqX" secondAttribute="bottom" constant="137" id="VHE-2k-Fx8"/>
+                            <constraint firstItem="eGc-Ja-QIu" firstAttribute="top" secondItem="OoY-Id-keP" secondAttribute="bottom" constant="137" id="Wlb-Sd-vPV"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="dKf-Ze-mqX" secondAttribute="trailing" constant="-4" id="aic-HJ-bOl"/>
+                            <constraint firstItem="OoY-Id-keP" firstAttribute="top" secondItem="RKS-Zt-dNg" secondAttribute="bottom" constant="22" id="eeD-62-w8h"/>
+                            <constraint firstItem="dKf-Ze-mqX" firstAttribute="top" secondItem="RKS-Zt-dNg" secondAttribute="bottom" constant="22" id="fkJ-4f-CqR"/>
+                            <constraint firstItem="dKf-Ze-mqX" firstAttribute="top" secondItem="OoY-Id-keP" secondAttribute="top" id="mJG-qQ-zaM"/>
+                            <constraint firstItem="gzt-5K-cSB" firstAttribute="top" secondItem="eGc-Ja-QIu" secondAttribute="bottom" constant="25" id="oho-Ja-Gpf"/>
                             <constraint firstItem="eGc-Ja-QIu" firstAttribute="centerX" secondItem="ERK-BT-jml" secondAttribute="centerX" id="wgu-Uf-MTq"/>
                         </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="VHE-2k-Fx8"/>
+                                <exclude reference="fkJ-4f-CqR"/>
+                                <exclude reference="Ojy-OL-Mi1"/>
+                            </mask>
+                        </variation>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
                         <outlet property="kenMap" destination="eGc-Ja-QIu" id="cbc-25-8Vg"/>
-                        <outlet property="resultHeader" destination="6xL-tv-HAF" id="NWp-4K-55y"/>
+                        <outlet property="selectedFromTable" destination="OoY-Id-keP" id="F0y-AC-3cS"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="AZa-RM-BZ0" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="ldx-OC-Vsg" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="882.5" y="630.5"/>
+            <point key="canvasLocation" x="475.5" y="1559.5"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="zuj-Fg-XG4">
@@ -578,7 +602,7 @@
                                     <rect key="frame" x="357" y="442" width="20" height="20"/>
                                 </variation>
                             </activityIndicatorView>
-                            <button opaque="NO" alpha="0.40000000000000002" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="P9K-HN-BBA">
+                            <button opaque="NO" alpha="0.40000000000000002" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="characterWrap" translatesAutoresizingMaskIntoConstraints="NO" id="P9K-HN-BBA">
                                 <rect key="frame" x="165" y="298" width="135" height="30"/>
                                 <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
@@ -686,7 +710,10 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2ii-Tw-cKu" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1669.5" y="558.5"/>
+            <point key="canvasLocation" x="1383.75" y="679.5"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="63p-0b-VaW"/>
+    </inferredMetricsTieBreakers>
 </document>

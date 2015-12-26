@@ -8,14 +8,14 @@
 
 /* Begin PBXBuildFile section */
 		713EA9713F981993A7803802 /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0349500442E83C9353860A36 /* Pods.framework */; };
-		B76814E11C2C752C001E65B1 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B76814E01C2C752C001E65B1 /* MapViewController.swift */; };
 		B76814E31C2C7534001E65B1 /* KenPlaces.swift in Sources */ = {isa = PBXBuildFile; fileRef = B76814E21C2C7534001E65B1 /* KenPlaces.swift */; };
-		B76814E51C2C7549001E65B1 /* AddressCaptureViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B76814E41C2C7549001E65B1 /* AddressCaptureViewController.swift */; };
 		B76814E71C2C7567001E65B1 /* ChoicesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B76814E61C2C7567001E65B1 /* ChoicesTableViewController.swift */; };
-		B76814E91C2C756F001E65B1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B76814E81C2C756F001E65B1 /* Main.storyboard */; };
+		B778C6AF1C2F40310031D7F4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B778C6AE1C2F40310031D7F4 /* Main.storyboard */; };
+		B778C6B11C2F40500031D7F4 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B778C6B01C2F40500031D7F4 /* MapViewController.swift */; };
+		B778C6B31C2F40710031D7F4 /* AddressCaptureViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B778C6B21C2F40710031D7F4 /* AddressCaptureViewController.swift */; };
+		B778C6B51C2F40870031D7F4 /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B778C6B41C2F40870031D7F4 /* WelcomeViewController.swift */; };
 		B7828AC71C263C080098C5D0 /* CheckBoxButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7828AC61C263C080098C5D0 /* CheckBoxButton.swift */; };
 		B7E4CC9F1C1EF3F5003EC434 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7E4CC9E1C1EF3F5003EC434 /* AppDelegate.swift */; };
-		B7E4CCA11C1EF3F5003EC434 /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7E4CCA01C1EF3F5003EC434 /* WelcomeViewController.swift */; };
 		B7E4CCA61C1EF3F5003EC434 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B7E4CCA51C1EF3F5003EC434 /* Assets.xcassets */; };
 		B7E4CCA91C1EF3F5003EC434 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B7E4CCA71C1EF3F5003EC434 /* LaunchScreen.storyboard */; };
 		B7E4CCB41C1EF3F5003EC434 /* KenelLaraqueTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7E4CCB31C1EF3F5003EC434 /* KenelLaraqueTests.swift */; };
@@ -57,15 +57,15 @@
 /* Begin PBXFileReference section */
 		0349500442E83C9353860A36 /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9F5EE63DE2EA53444F53FCD0 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
-		B76814E01C2C752C001E65B1 /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		B76814E21C2C7534001E65B1 /* KenPlaces.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KenPlaces.swift; sourceTree = "<group>"; };
-		B76814E41C2C7549001E65B1 /* AddressCaptureViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddressCaptureViewController.swift; sourceTree = "<group>"; };
 		B76814E61C2C7567001E65B1 /* ChoicesTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChoicesTableViewController.swift; sourceTree = "<group>"; };
-		B76814E81C2C756F001E65B1 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		B778C6AE1C2F40310031D7F4 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		B778C6B01C2F40500031D7F4 /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
+		B778C6B21C2F40710031D7F4 /* AddressCaptureViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddressCaptureViewController.swift; sourceTree = "<group>"; };
+		B778C6B41C2F40870031D7F4 /* WelcomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
 		B7828AC61C263C080098C5D0 /* CheckBoxButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CheckBoxButton.swift; sourceTree = "<group>"; };
 		B7E4CC9B1C1EF3F5003EC434 /* KenelLaraque.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KenelLaraque.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B7E4CC9E1C1EF3F5003EC434 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		B7E4CCA01C1EF3F5003EC434 /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
 		B7E4CCA51C1EF3F5003EC434 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B7E4CCA81C1EF3F5003EC434 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B7E4CCAA1C1EF3F5003EC434 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -188,16 +188,16 @@
 			children = (
 				B7E4CC9E1C1EF3F5003EC434 /* AppDelegate.swift */,
 				B7FC97BB1C2787DD00D20BFD /* DataManager.swift */,
-				B7E4CCA01C1EF3F5003EC434 /* WelcomeViewController.swift */,
 				B7E4CCA51C1EF3F5003EC434 /* Assets.xcassets */,
 				B7E4CCA71C1EF3F5003EC434 /* LaunchScreen.storyboard */,
 				B7E4CCAA1C1EF3F5003EC434 /* Info.plist */,
-				B76814E41C2C7549001E65B1 /* AddressCaptureViewController.swift */,
-				B76814E81C2C756F001E65B1 /* Main.storyboard */,
+				B778C6AE1C2F40310031D7F4 /* Main.storyboard */,
+				B778C6B41C2F40870031D7F4 /* WelcomeViewController.swift */,
 				B7EFFC021C245191002B1080 /* KenelLaraque-Bridging-Header.h */,
 				B76814E61C2C7567001E65B1 /* ChoicesTableViewController.swift */,
+				B778C6B21C2F40710031D7F4 /* AddressCaptureViewController.swift */,
+				B778C6B01C2F40500031D7F4 /* MapViewController.swift */,
 				B76814E21C2C7534001E65B1 /* KenPlaces.swift */,
-				B76814E01C2C752C001E65B1 /* MapViewController.swift */,
 				B7828AC61C263C080098C5D0 /* CheckBoxButton.swift */,
 			);
 			path = KenelLaraque;
@@ -361,7 +361,7 @@
 				B7E4CCA91C1EF3F5003EC434 /* LaunchScreen.storyboard in Resources */,
 				B7E4CCA61C1EF3F5003EC434 /* Assets.xcassets in Resources */,
 				B7EFFBED1C2437A4002B1080 /* Podfile in Resources */,
-				B76814E91C2C756F001E65B1 /* Main.storyboard in Resources */,
+				B778C6AF1C2F40310031D7F4 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -436,16 +436,16 @@
 			files = (
 				B7EFFC0F1C245192002B1080 /* FMResultSet.m in Sources */,
 				B76814E71C2C7567001E65B1 /* ChoicesTableViewController.swift in Sources */,
-				B7E4CCA11C1EF3F5003EC434 /* WelcomeViewController.swift in Sources */,
 				B7EFFC101C245192002B1080 /* FMDatabaseQueue.m in Sources */,
 				B7EFFC121C245192002B1080 /* FMDatabasePool.m in Sources */,
 				B7828AC71C263C080098C5D0 /* CheckBoxButton.swift in Sources */,
-				B76814E11C2C752C001E65B1 /* MapViewController.swift in Sources */,
+				B778C6B11C2F40500031D7F4 /* MapViewController.swift in Sources */,
+				B778C6B51C2F40870031D7F4 /* WelcomeViewController.swift in Sources */,
 				B7EFFC0E1C245192002B1080 /* FMDatabase.m in Sources */,
 				B7FC97BC1C2787DD00D20BFD /* DataManager.swift in Sources */,
 				B76814E31C2C7534001E65B1 /* KenPlaces.swift in Sources */,
 				B7E4CC9F1C1EF3F5003EC434 /* AppDelegate.swift in Sources */,
-				B76814E51C2C7549001E65B1 /* AddressCaptureViewController.swift in Sources */,
+				B778C6B31C2F40710031D7F4 /* AddressCaptureViewController.swift in Sources */,
 				B7EFFC111C245192002B1080 /* FMDatabaseAdditions.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
